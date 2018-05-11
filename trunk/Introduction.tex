@@ -1,0 +1,45 @@
+
+In the standard model (SM)~\cite{Salam:1961en,Glashow:1961tr,Weinberg:1967tq}, the Brout-Englert-Higgs mechanism ~\cite{PhysRevLett.13.321,PhysRevLett.13.508,PhysRevLett.13.585} is responsible for electroweak symmetry breaking and endows electroweak gauge bosons with mass. This mechanism predicts the existence of a physical Higgs boson, and its observation in 2012 with LHC Run 1 proton-proton collision data by CMS~\cite{:2012gu} and ATLAS~\cite{:2012gk} achieved one of the main goals of the LHC physics program. Though its mass has been precisely determined to be $m_\PH = 125.09 \pm 0.24 \GeV$, its observed properties and couplings are only measured with a precision at the level of 10\% or worse~\cite{CMS:2015kwa}. In particular, the LHC Run 1 data did not clearly establish the coupling of the Higgs boson to bottom quarks despite the dominant branching ratio of a SM Higgs boson (with a mass of $125.1\GeV$) to a bottom-antibottom quark pair (58.1\%~\cite{YR4}).
+
+Fig.~\ref{fig:LHC_H} shows the expected production cross sections and the expected decay mode branching ratios as a function of Higgs boson mass for $\sqrt{s}=13\TeV$. The most abundant LHC channel for a SM Higgs boson is production via gluon fusion and decay via $\PH\to\bbbar$. 
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=0.49\textwidth]{figures/plot_13tev_H_sqrt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/SMHiggsBR-YR4-square.pdf}
+    \caption{Minimal SM Higgs production and decay at the LHC~\cite{YR4}.
+(\cmsLeft) Production cross sections at $\sqrt{s}=13\TeV$, for $m_\PH= 120\mbox{--}130~\GeV$. 
+(\cmsRight) Decay Branching Fractions for $m_\PH= 120\mbox{--}130~\GeV$.}
+    \label{fig:LHC_H}
+  \end{center}
+\end{figure}
+
+The traditional search strategy for the standard model decay $\PH\to\bbbar$ at the LHC is to use events in which the Higgs boson is produced in association with a $\PW$ or $\PZ$ boson, and recoiling with large transverse momentum~\cite{Butterworth:2008iy}. The reason for using the subdominant $\PV\PH$ production mode, rather than the dominant gluon fusion production mode, is due to the large background from QCD production of $\PQb$ quarks in this channel. 
+It was previously believed that searching for $\PH\to\bbbar$ decays in the dominant gluon fusion Higgs production mode was intractable, due to
+the allegedly ireducible background from QCD production of b quarks.
+However, the recent 2017 searches from CMS in this channel have presented a more encouraging picture, making use of substructure and flavor tagging
+to obtain an observed significance of 1.5$\sigma$ on gluon fusion $\PH\to\bbbar$, and an observed significance of 5.1$\sigma$ on $\ZtoBB$ \cite{CMS-PAS-HIG-17-010}.
+This result also gives us a clue for how to analyze the most boosted of the $\PV\PH$ events in the $\PH\to\bbbar$ decay mode.
+
+This analysis note describes a search for the standard model Higgs boson with $\PH\to\bbbar$ decays produced in association with a vector boson having transverse momentum greater than order $100\GeV$.
+The method for reconstructing the hadronic Higgs boson decay depends on the momentum of the vector boson and the practical effects of the jet clustering.
+By default, the Higgs boson is reconstructed in two resolved, narrow jets each with opening angle corresponding to R = 0.4 (AK4 jets).
+This "resolved strategy" is the classic pursued in one way or another since the Tevatron, and it has been carefully and masterfully optimized through numerous iterations up to and including CMS Run2.
+
+For the events with highly boosted vector bosons having $\pt > 250\GeV$, there is a possibility for these two jets to merge into a single so-called "fatjet" with opening angle R = 0.8 (AK8) jet. If such a fatjet is found, and it is recoiling back-to-back against the aforementioned vector boson, then we instead analyze the event in a separate boosted fatjet category.
+Compared to the resolved reconstruction mode, this is quite rare, but it has the advantage that the irreducible backgrounds become smaller due to their softer $\pt$ spectra. In this case, a dedicated b-tagging algorithm is exploited in order to identify the \bbbar pair produced from an H boson with high transverse momentum (double-b tagger ~\cite{CMS-PAS-BTV-15-002}).
+
+We construct this analysis strategy not only in seeking the first observation of this decay mode, but also
+looking forward to the end of Run2 and the High Luminosity LHC, with the hopes of reducing the impact of the systematic uncertainty
+on a challenging and exciting analysis in CMS.
+
+
+This analysis note describes the search for the standard model Higgs boson 
+with $\PH\to\bbbar$\ decays, produced in association with a W or Z boson in LHC Run2, 
+% using 12.9/fb
+using 35.9/fb
+data collected in 2016 at $\sqrt{s}=13~\TeV$. This analysis note will eventually include as well the 2017 data once the simulation processing is complete.
+
+Only the analysis topology \WlnH, with $\ell=\Pe, \Pgm$ is presented in this iteration of the note.
+The other channels (\ZllH, \ZnnH) are to be analyzed following the same strategy in short order. 
+

@@ -1,0 +1,310 @@
+%\section{Signal normalization}
+
+
+
+\subsection{Frequentist Interpretation}
+
+Given the binned likelihood on data $\mathcal
+L(\mathrm{data}|\mu,\boldsymbol{\theta})$, we define the profile
+likelihood test statistic following the LHC \CLs procedure~\cite{LHCCLs},
+\begin{equation}
+\tilde q_{\mu} = -2\log\frac{\mathcal
+  L(\mathrm{data}|\mu,\boldsymbol{\hat\theta}_{\mu})}{\mathcal
+  L(\mathrm{data}|\hat\mu, \boldsymbol{\hat\theta})} ~,~~
+0\leq\hat\mu\leq\mu~,
+\label{eqn:LHCteststat}
+\end{equation}
+where $\boldsymbol{\hat\theta}_{\mu}$ refers to the conditional maximum
+likelihood estimators of $\boldsymbol{\theta}$ assuming a given value
+$\mu$, and $\hat\mu$ and $\boldsymbol{\hat\mu}$ correspond to the
+global maximum of the likelihood. In the asymptotic regime, we may
+derive the observed 95\% CL upper limit on the signal strength by
+computing the value of $\mu$ that satisfies, 
+\begin{equation}
+\mathrm{CL}_{\mathrm{s}}\equiv
+\frac{\mathrm{CL}_{\mathrm{s+b}}}{\mathrm{CL}_{\mathrm{b}}} = 
+\frac{1-\Phi(\sqrt{\tilde
+    q_{\mu}})}{\Phi(\sqrt{\tilde q_{\mu,\mathrm{A}}} - \sqrt{\tilde
+    q_{\mu}} ) } = \alpha ~,
+\end{equation}
+where $\alpha = 0.05$, $\tilde q_{\mu,\mathrm{A}}$\footnote{Note $\tilde
+  q_{\mu,\mathrm{A}} = \frac{\mu^2}{\sigma_{\mathrm{A}}^2}$ where
+  $\sigma_{\mathrm{A}}$ is an estimator for the variance of $\mu$.} is the test statistic evaluated on
+the Asimov dataset~\cite{Asimov} corresponding exactly to the expected
+background and the nominal nuisance parameters (setting all
+statistical fluctuations to zero)~\cite{Cowan:2010js,LHCCLs}, and 
+$\Phi(x)$ is the cumulative distribution function of the standard
+normal distribution. A similar expression is used to derive the median expected 95\% CL upper limit, 
+\begin{equation}
+\frac{1-\Phi(\sqrt{\tilde q_{\mu,\mathrm{A}}})}{0.5} = \alpha ~.
+\end{equation}
+%Importantly, for situations with small numbers of events, the
+%asymptotic result is known to give biased (over-optimistic) results~\cite{LHCCLs}.
+
+Conversely, in the case of a discovery, one tests $\mu=0$ and measures
+the ``local significance'' using a modified test statistic,
+\begin{equation}
+q_{0} = -2\log\frac{\mathcal
+  L(\mathrm{data}|0,\boldsymbol{\hat\theta}_{0})}{\mathcal
+  L(\mathrm{data}|\hat\mu, \boldsymbol{\hat\theta})} ~, ~~ \hat\mu\geq 0~.
+\end{equation}
+The observed local significance is then simply $Z = \sqrt{q_0}$.
+ 
+\subsection{Expected sensitivity using QCD MC}
+
+The first test of the fit procedure is done by using MC only to predict the final expected sensitivity.
+We take pass and fail yields for the signals and $\PW$, $\PZ$, and $\ttbar$ backgrounds from simulation.
+%We then take the QCD fail yields also from simulation and define the
+%pass yield to be the fail region shape times the efficiency of the
+%double b-tag discriminator cut.
+
+In the absence of a signal ($\mu=0$), the 95\% CL median expected limit on the
+signal strength is $\mu<3.73$ ($\mu<2.77$ including the signal Higgs \pt
+corrections described in Sec.~\ref{sec:signalpt}), accounting for
+all systematic uncertainties. Conversely, in the presence of a signal
+($\mu=1$), the expected significance is $0.52\sigma$ ($0.76\sigma$ including the signal Higgs \pt
+corrections). Fig.~\ref{fig:deltaLL_qcd} shows the profile
+likelihood test statistic scan in $\mu$ on the asimov dataset derived
+from the background-only MC ($\mu=0$) and the
+signal$+$background MC ($\mu=1$). Tab.~\ref{tab:expectedLimits}
+lists the corresponding ``stat$+$syst'' expected limits in the absence
+of a signal ($\mu=0$) as well as the expected significance in the
+presence of a signal ($\mu=1$).
+
+\begin{figure}[hbtp]
+\centering
+\subfigure[$\mu=0$]{\includegraphics[width=0.48\textwidth]{figures/results/qcd/deltaLL_asimov_r0p000000.pdf}}
+\subfigure[$\mu=1$]{\includegraphics[width=0.48\textwidth]{figures/results/qcd/deltaLL_asimov_r1p000000.pdf}}
+	\caption{Profile Likelihood test statistic
+          $-2\Delta\log(\mathcal{L})$ scan as a function of the signal
+          strength $\mu$ on the asimov dataset. The solid black curve,
+          labeled ``stat$+$syst,'' corresponds to the scan when
+          profiling all nuisance parameters and the dotted blue curve,
+          labeled ``stat only,'' corresponds to only profiling the
+          unconstrained nuisance parameters: QCD transfer factor
+          parameters and the $\ttbar$ scale factors. The
+          expected 95\% CL upper limit on $\mu$ with or without the
+          systematic uncertaintines corresponds to the $\mu$ value
+          for which the corresponding test statistic curve intersects
+          $-2\Delta\log(\mathcal{L}) = 3.84$}
+	\label{fig:deltaLL_qcd}}
+ \end{figure}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ll}
+\hline\hline
+Without Higgs \pt corrections, $\mu=0$ & \\
+\hline\hline
+Expected  2.5\%& $\mu < 2.0204$\\
+Expected 16.0\%& $\mu <2.6899$\\
+Expected 50.0\%& $\mu< 3.7344$\\
+Expected 84.0\%& $\mu< 5.2378$\\
+Expected 97.5\%& $\mu< 7.0301$\\
+\hline
+ $\mu=1$ & \\
+\hline
+Expected significance & $0.52\sigma$\\
+\hline\hline
+With Higgs \pt corrections, $\mu=0$ & \\
+\hline\hline
+Expected  2.5\%& $\mu< 1.4192$\\
+Expected 16.0\%& $\mu< 1.9218$\\
+Expected 50.0\%& $\mu< 2.7734$\\
+Expected 84.0\%& $\mu< 4.1111$\\
+Expected 97.5\%& $\mu < 6.0191$\\
+\hline
+ $\mu=1$ & \\
+\hline
+Expected significance & $0.76\sigma$\\
+\hline\hline
+
+\end{tabular}
+\caption{``Stat$+$syst'' expected limits for $35.9\fbinv$ from
+  \texttt{combine} in the absense of a signal ($\mu=0$) and expected
+  significance in the presense of a signal ($\mu=1$) including the
+  the full set of systematic uncertainties and with and without the Higgs \pt corrections.
+\label{tab:expectedLimits}}
+\end{table}
+\clearpage
+\subsection{Fit closure}
+We perform the closure test for the Higgs signal considering the full set of systematic unceratinty and for $\mu=1$. 
+From the observed fits, we do not observe any significant deviation and pulls are found to be consistent with unity, see Fig.~\ref{fig:pullsdataH}.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/Hpulls.png}
+ \caption{The pull distribution from generating off the best fit distribution and fitting with the default signal extraction method, for the H signal.}
+
+ \label{fig:pullsdataH}
+ \end{figure}
+
+\clearpage
+
+\subsection{Observed results}
+
+In Figs.~\ref{fig:fitdata0}-\ref{fig:fitdata2}, the post-fit distributions of $\mSD$ in data
+are shown for the passing and failing categories and compared to the
+background prediction for the full dataset. Finally,
+Fig.~\ref{fig:qcdTF} shows the two-dimensional QCD transfer factor in
+($\mSD,\pt$) and ($\rho,\pt$)  space.
+
+
+\begin{figure}[hbtp]
+\centering
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_fail_allcats_fit_s.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_pass_allcats_fit_s.pdf}\\
+ \caption{Post-fit $m_{\mathrm{SD}}$ distributions in data events for the
+      pass and fail regions by summing all the \pt categories and using a
+      polynomial 2nd order in $\rho$ and 1st order in $\pt$. The EWK and
+      signal events are also shown separately.  }
+ \label{fig:fitdata2}
+ \end{figure}
+
+\clearpage
+
+\begin{figure}[hbtp]
+\centering
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_fail_cat1_fit_s.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_pass_cat1_fit_s.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_fail_cat2_fit_s.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_pass_cat2_fit_s.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_fail_cat3_fit_s.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_pass_cat3_fit_s.pdf}\\
+ \caption{Post-fit $m_{\mathrm{SD}}$ distributions in data events for the
+      pass and fail regions and the first three \pt categories (450-500,500-550,550-600 from top to bottom) by using a
+      polynomial 2nd order in $\rho$ and 1st order in $\pt$. 
+     The EWK and
+      signal events are also shown separately.  }
+ \label{fig:fitdata0}
+ \end{figure}
+
+\begin{figure}[hbtp]
+\centering
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_fail_cat4_fit_s.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_pass_cat4_fit_s.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_fail_cat5_fit_s.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_pass_cat5_fit_s.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_fail_cat6_fit_s.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/mlfit_pass_cat6_fit_s.pdf}\\
+ \caption{Post-fit $m_{\mathrm{SD}}$ distributions in data events for the
+      pass and fail regions and the last three \pt categories (600-675,675-800,800-1000 from top to bottom) by using a
+      polynomial 2nd order in $\rho$ and 1st order in $\pt$. The EWK and
+      signal events are also shown separately.  }
+ \label{fig:fitdata1}
+ \end{figure}
+
+
+\begin{figure}[hbtp]
+\centering
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/tf_msdcolz.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/results_approval/tf_rhocolz.pdf}
+    \caption{Post-fit QCD transfer factor map in ($\mSD,\pt$) (left)
+      and ($\rho,\pt$) (right) space.  }
+ \label{fig:qcdTF}
+ \end{figure}
+
+\clearpage
+
+
+The measured $\PZ$ boson signal strength is $\mu_\PZ =\muZVal_{-\muZErrLo}^{+\muZErrHi}$,  which corresponds to an observed significance of $\muZObsSig\sigma$ with $\muZExpSig\sigma$ expected. This constitutes the first observation of the $\PZ$ signal in the single-jet topology, further validating the substructure and $\cPqb$-tagging strategy for the Higgs boson search in the same topology. The measured cross section of the $\PZ+$jets process is $\xsecZVal_{-\xsecZErrLo}^{+\xsecZErrHi}\unit{fb}$, which is consistent with the SM expectation within the uncertainty. The measured $\PH$ boson signal strength is $\mu=\muVal_{-\muErrLo}^{+\muErrHi}$, including the $\pt$ corrections described in Sec.~\ref{sec:signalpt}.  The observed (expected) significance is $\muObsSig\sigma$ ($\muExpSig\sigma$). The measured cross section of the $\PH(\bbbar)$ production for $\pt>450\GeV$ is $\xsecVal_{-\xsecErrLo}^{+\xsecErrHi}\unit{fb}$, which is consistent with the SM expectation within the uncertainty.
+
+
+Tab.~\ref{tab:ObservedSig} lists the corresponding observed
+significance and Fig.~\ref{fig:deltaLL}-\ref{fig:deltaLLZ} shows the profile likelihood test
+statistic scan as a function of the Higgs and Z boson signal strength parameters
+($\mu,\mu_{Z}$) when fitting the data and the post-fit asimov dataset.
+
+Fig.~\ref{fig:fitch2} show the fitted signal strenght per each $\pt$ category for the $\PH$ and $\PZ$ signals in the case the other POI is free to float.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/results_approval/deltaLL_data_r1p000000_floatOtherPOIs.pdf}
+\includegraphics[width=0.48\textwidth]{figures/results_approval/deltaLL_data_r_z1p000000_floatOtherPOIs.pdf}
+\includegraphics[width=0.65\textwidth]{figures/results_approval/deltaLL2D_data.pdf}
+        \caption{Profile likelihood test statistic $-2\Delta\log\mathcal{L}$ scan as a function of the $\PH$ signal
+          strength $\mu$ (upper left), $\PZ$ signal strength $\mu_\PZ$ (upper right), and both signal strengths $(\mu,\mu_\PZ)$ (lower).}
+        \label{fig:deltaLL}}
+ \end{figure}
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/results_approval/deltaLL2D_asimov.pdf}
+        \caption{Profile likelihood test statistic $-2\Delta\log\mathcal{L}$ scan as a function of the $\PH$ and $\PZ$ signal strength $(\mu,\mu_\PZ)$ when fitting the asimov dataset.}
+        \label{fig:deltaLLZ}}
+ \end{figure}
+
+
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llll}
+\hline\hline
+ & $\PH$ & $\PH$ no \pt corrections &$\PZ$\\
+\hline\hline
+Observed best fit   & $\mu=\muVal_{-\muErrLo}^{+\muErrHi}$ & $\mu'=\muNoVal_{-\muNoErrLo}^{+\muNoErrHi}$  & $\mu_\PZ =\muZVal_{-\muZErrLo}^{+\muZErrHi}$\\
+%\hline
+%Observed limit& $\mu < 6.87$\\
+%Expected  2.5\%& $\mu < 2.02$\\
+%Expected 16.0\%& $\mu< 2.70$\\
+%Expected 50.0\%& $\mu< 3.76$\\
+%Expected 84.0\%& $\mu< 5.28$\\
+%Expected 97.5\%& $\mu< 7.14$\\
+%\hline
+Expected significance &  $\muExpSig\sigma$ ($\mu=1$) &$\muNoExpSig\sigma$ ($\mu'=1$) &  $\muZExpSig\sigma$ ($\mu_{\PZ}=1$) \\
+Observed significance &  $\muObsSig\sigma$ &$\muNoObsSig\sigma$ &  $\muZObsSig\sigma$\\
+\hline\hline
+\end{tabular}
+\caption{Fitted signal strength and observed significance of the Higgs and $\PZ$ signals.
+\label{tab:ObservedSig}}
+\end{table}
+
+
+
+\begin{figure}[hbtp]
+\centering
+\subfigure[$\PH$, $\PZ$ floating]{\includegraphics[width=0.49\textwidth]{figures/results_approval/ccc_r.pdf}}
+\subfigure[$\PZ$, $\PH$ floating]{\includegraphics[width=0.49\textwidth]{figures//results_approval/ccc_r_z.pdf}}
+ \caption{Fitted signal strenghts for the Higgs and Z boson signals for each \pt category by floating the Z and H signal strenght parameter respectively.}
+        \label{fig:fitch2}
+ \end{figure}
+
+\clearpage
+\subsection{Pre- and post-fit systematic uncertainties}
+
+
+Fig.~\ref{fig:impacts} shows the pulls of the constrained nuisance parameters as well as the impacts on the signal
+strength when fitting the data including the Higgs $\pt$ corrections.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.72\textwidth]{figures/results_approval/impacts_data_r.pdf}
+	\caption{Impacts for nuisance parameters (excluding MC
+          statistic uncertainties and freely floating QCD parameters) when fitting the data with Higgs $\pt$ corrections.
+	\label{fig:impacts}}
+ \end{figure}
+
+Similarly, Fig.~\ref{fig:impactsnoHpt} shows the same pulls excluding
+the dominant uncertainty on the signal coming from the theory uncertainty on the gluon fusion cross section at high \pt. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.72\textwidth]{figures/results_approval/impacts_data_r_nothy.pdf}
+        \caption{Impacts for nuisance parameters (excluding MC
+          statistic uncertainties and freely floating QCD parameters) when fitting the data with Higgs $\pt$ corrections without including the theory uncertainty.
+        \label{fig:impactsnoHpt}}
+ \end{figure}
+
+The pulls of the constrained nuisance parameters when fitting the data to extract the Z signal are rerpoted in Fig.~\ref{fig:impactsZ}. They are compatible to the Higgs signal extraction case (Fig.~\ref{fig:impactsnoHpt}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.72\textwidth]{figures/results_approval/impacts_data.pdf}
+        \caption{Impacts for nuisance parameters (excluding MC
+          statistic uncertainties and freely floating QCD parameters) when fitting the data to extract the Z signal. 
+        \label{fig:impactsZ}}
+ \end{figure}
+
+\clearpage

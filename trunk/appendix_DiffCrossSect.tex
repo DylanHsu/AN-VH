@@ -1,0 +1,104 @@
+
+A measurement of the Higgs boson differential cross section as a function of the Higgs $p_{T}$ investigates possible deviations in the distribution related to production and decay of the Higgs. It provides a check of perturbative calculations in quantum chromodynamics and can point to alternative models in the Higgs sector since any modifications to the $p_{T}$ distribution could signify new contributions to gluon fusion production of the Higgs boson.
+
+This appendix describes the measurement of the ggH differential cross section as a function of the Higgs $p_{T}$. The ggH signal sample is split into two Higgs GEN $p_{T}$ bins, corresponding to two differential cross section points on the Higgs $p_{T}$ spectrum. To avoid bin migration effects, the number of reco $p_{T}$ bins used in the rhalphabet background fit is reduced to two.
+
+\subsection{$p_{T}$ binning}
+The reco $p_{T}$ bins are combined into two bins from 450-600 GeV and 600-1000 GeV. We split the ggH signal into two Higgs GEN $p_{T}$ bins that are chosen so that the majority of each reco $p_{T}$ bin is composed of a single GEN $p_{T}$ bin. The edge of the lowest bin is 350 GeV to conform with the binning used by the Higgs differential combination measurement and a bin boundary at 575 GeV is found to optimize the $1-1$ correspondence between reco and GEN bins. The percentage of events from each GEN $p_{T}$ bin within each reco $p_{T}$ bin can be seen in Table~\ref{tab:GENperc}. Figure~\ref{fig:GENdist} shows the GEN $p_{T}$ ggH $m_\mathrm{SD}$ distributions in each reco $p_{T}$ bin. 
+
+\begin{table}[htbp]
+\centering
+  \begin{tabular}{ccc}
+  \hline
+   & $350 - 575$ GeV GEN $p_{T}$ & $> 575$ GeV GEN $p_{T}$\\
+  \hline
+$450 - 600$ GeV reco $p_{T}$ & 86.4 &  13.6 \\
+$600 - 1000$ GeV reco $p_{T}$ & 7.0 &  93.0 \\
+  \hline
+  \end{tabular}
+  \caption{Percentage of ggH signal events in each reco $p_{T}$ bin from each GEN $p_{T}$ category.} \label{tab:GENperc}
+\end{table}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/ggH_GEN_dist/hqq125_pass_cat1.pdf}
+\includegraphics[width=0.49\textwidth]{figures/ggH_GEN_dist/hqq125_pass_cat2.pdf} \\
+ \caption{The ggH $m_\mathrm{SD}$ distributions in each reco $p_{T}$ bin split into the GEN $p_{T}$ categories.}
+ \label{fig:GENdist}
+ \end{figure}
+
+The remaining non-ggH Higgs signals, VBF, $\PV\PH$, and $\ttbar\PH$, are grouped together and treated as a separate process.
+
+
+\subsection{Fit validation}
+The order of the QCD transfer factor polynomial is chosen with the same method that is outlined in Section~\ref{sec:ftest}. We begin with the $(n_{\rho} = 2, n_{\pt} = 1)$ polynomial, which is used to derive the main result, and test against the $(n_{\rho} = 3, n_{\pt} = 1)$ polynomial. We perform the fit on the full 2016 dataset and find that $(n_{\rho} = 3, n_{\pt} = 1)$ provides a significantly better fit than $(n_{\rho} = 2, n_{\pt} = 1)$ with a p-value $<0.05$. Subsequently, we test the $(n_{\rho} = 3, n_{\pt} = 1)$ polynomial against the $(n_{\rho} = 4, n_{\pt} = 1)$ polynomial, and we find that $(n_{\rho} = 4, n_{\pt} = 1)$ does not provide a significantly better fit. Finally, we test the $(n_{\rho} = 3, n_{\pt} = 1)$ polynomial against the $(n_{\rho} = 3, n_{\pt} = 2)$ polynomial and again we find that $(n_{\rho} = 3, n_{\pt} = 2)$ does not provide a better fit. Therefore, we conclude that the $F$-test shows that the $(n_{\rho}= 3, n_{\pt} = 1)$ order polynomial provides the best fit for two reco $p_{T}$ bins. The results of the $F$-test are shown in Figure~\ref{fig:FtestData2pTbins}.
+
+%Simalarly, in Figure~\ref{fig:FtestMC2pTbins}, we show the $F$-test results when fitting the MC with $\mu=1$. This $F$-test indicates that the $(n_{\rho} = 4, n_{\pt} = 1)$ polynomial is optimal to fit MC. 
+
+Figure~\ref{fig:mlfit2pTbinsMC} shows the signal+background fit to MC simulation in the two reco $p_{T}$ bins.
+
+\begin{figure}[hbtp]
+\centering
+\subfigure[$(n_{\rho} = 2, n_{\pt} = 1)$ vs. $(n_{\rho} = 3, n_{\pt} = 1)$]{\includegraphics[width=0.49\textwidth]{figures/ftest_2pTbins_data/ftest_card_rhalphabet_muonCR_floatZ_r2p1_vs_card_rhalphabet_muonCR_floatZ_r3p1.pdf}}
+\subfigure[$(n_{\rho} = 3, n_{\pt} = 1)$ vs. $(n_{\rho} = 4, n_{\pt} = 1)$]{\includegraphics[width=0.49\textwidth]{figures/ftest_2pTbins_data/ftest_card_rhalphabet_muonCR_floatZ_r3p1_vs_card_rhalphabet_muonCR_floatZ_r4p1.pdf}} \\
+\subfigure[$(n_{\rho} = 3, n_{\pt} = 1)$ vs. $(n_{\rho} = 3, n_{\pt} = 2)$]{\includegraphics[width=0.49\textwidth]{figures/ftest_2pTbins_data/ftest_card_rhalphabet_muonCR_floatZ_r3p1_vs_card_rhalphabet_muonCR_floatZ_r3p2.pdf}}
+%\subfigure[$(n_{\rho} = 4, n_{\pt} = 1)$ vs. $(n_{\rho} = 4, n_{\pt} = 2)$]{\includegraphics[width=0.49\textwidth]{figures/ftest_2pTbins_mc/ftest_2pTbins_mc_card_rhalphabet_r2p1_vs_card_rhalphabet_r3p1.pdf}}
+ \caption{The $F$-test for different hypotheses on the full, unblinded 2016 dataset using two Reco $p_{T}$ bins.}
+ \label{fig:FtestData2pTbins}
+ \end{figure}
+
+%\begin{figure}[hbtp]
+%\centering
+%\subfigure[$(n_{\rho} = 2, n_{\pt} = 1)$ vs. $(n_{\rho} = 3, n_{\pt} = 1)$]{\includegraphics[width=0.49\textwidth]{figures/ftest_2pTbins_data/ftest_card_rhalphabet_muonCR_floatZ_r2p1_vs_card_rhalphabet_muonCR_floatZ_r3p1.pdf}}
+%\subfigure[$(n_{\rho} = 3, n_{\pt} = 1)$ vs. $(n_{\rho} = 4, n_{\pt} = 1)$]{\includegraphics[width=0.49\textwidth]{figures/ftest_2pTbins_data/ftest_card_rhalphabet_muonCR_floatZ_r3p1_vs_card_rhalphabet_muonCR_floatZ_r4p1.pdf}} \\
+%\subfigure[$(n_{\rho} = 3, n_{\pt} = 1)$ vs. $(n_{\rho} = 3, n_{\pt} = 2)$]{\includegraphics[width=0.49\textwidth]{figures/ftest_2pTbins_data/ftest_card_rhalphabet_muonCR_floatZ_r3p1_vs_card_rhalphabet_muonCR_floatZ_r3p2.pdf}}
+%\subfigure[$(n_{\rho} = 4, n_{\pt} = 1)$ vs. $(n_{\rho} = 4, n_{\pt} = 2)$]{\includegraphics[width=0.49\textwidth]{figures/ftest_2pTbins_mc/ftest_2pTbins_mc_card_rhalphabet_r2p1_vs_card_rhalphabet_r3p1.pdf}}
+% \caption{The $F$-test for different hypotheses on unblinded MC (with $\mu=1$), corresponding to the full 2016 dataset using two Reco $p_{T}$ bins.}
+% \label{fig:FtestMC2pTbins}
+% \end{figure}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/mlfit_qcd_2pTbins/mlfit_fail_cat1_fit_s_3p1.pdf}
+\includegraphics[width=0.49\textwidth]{figures/mlfit_qcd_2pTbins/mlfit_pass_cat1_fit_s_3p1.pdf}\\
+\includegraphics[width=0.49\textwidth]{figures/mlfit_qcd_2pTbins/mlfit_fail_cat2_fit_s_3p1.pdf}
+\includegraphics[width=0.49\textwidth]{figures/mlfit_qcd_2pTbins/mlfit_pass_cat2_fit_s_3p1.pdf}
+ \caption{Post-fit $m_\mathrm{SD}$ distributions in simulated MC events for the pass and fail regions in the two $p_{T}$ categories (450-600, 600-1000 from top to bottom) by using a polynomial 3rd order in $\rho$ and 1st order in $p_{T}$. The EWK and signal events are also shown separately.}
+ \label{fig:mlfit2pTbinsMC}
+ \end{figure}
+
+\subsection{Pre- and post-fit systematic uncertainties}
+Figure~\ref{fig:Pulls2pTbins} shows the pulls of the constrained nuisance parameters as well as the impacts on the signal strength when fitting the signal+backgroun asimov dataset ($\mu=1$).
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.72\textwidth]{figures/pulls_2pTbins_data/impacts_asimov_JERUpDown.pdf}
+ \caption{Impacts when fitting the signal+background asimov dataset($\mu=1$).}
+ \label{fig:Pulls2pTbins}
+ \end{figure}
+
+Similarly, Figure~\ref{fig:Pulls2pTbinsMC} shows the pulls when fitting the signal+background asimov dataset ($\mu=1$) built from MC.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.72\textwidth]{figures/pulls_2pTbins_mc/impacts_asimov_mc.pdf}
+ \caption{Impacts when fitting the signal+background asimov dataset($\mu=1$) built from MC.}
+ \label{fig:Pulls2pTbinsMC}
+ \end{figure}
+
+\subsection{Results}
+The covariance matrix of the ggH signal strengths from the 2 $p_{T}$ bins using the asimov datatset ($\mu=1$) is shown in Table~\ref{tab:CovarianceMatrix}.
+
+\begin{table}[htbp]
+\centering
+  \begin{tabular}{ccc}
+  \hline
+   & $350 - 575$ GeV GEN $p_{T}$ & $> 575$ GeV GEN $p_{T}$\\
+  \hline
+$350 - 575$ GeV GEN $p_{T}$ & 7.637   & 0.3554 \\
+$>575$ GeV GEN $p_{T}$      & 0.3554  & 6.52   \\
+  \hline
+  \end{tabular}
+  \caption{The covariance matrix for the ggH signal strengths from the 2 $p_{T}$ categories using the asimov dataset ($\mu=1$).} \label{tab:CovarianceMatrix}
+\end{table}
+

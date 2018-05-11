@@ -1,0 +1,65 @@
+\subsection{Ad-hoc correction to the spectra of W boson transverse momentum}
+In the resolved category \WlnH\ control regions a downward slope in the data/MC ratio is observed for the reconstructed \ptV\ after the full set of corrections and scale factors have been applied.
+We believe this to be the result of the interplay of the falling shape of the differential W cross section as a function of boson $\pt$, and 
+the use of higher-order W+jets QCD correction factors which are binned very coarsely in LHE-level $H_T$.
+We are interested in deriving instead QCD NLO k-factors binned more finely in the boson $\pt$ if time permits.
+
+For now, we use the independent linear re-weighting functions derived in the excellent 2016-only analysis
+to correct this slope for \ttbar\ , \Wudscg\ , and the combination of \Wbb\ and single top via a simultaneous fit of the reconstructed \ptV\ in the \WlnH\ control regions to data.
+The input PDF for the fit in each control region is a sum of the MC prediction for each process corrected by a linear function of the reconstructed \ptV\ with a slope that is allowed to float in the fit.
+The relative composition of the fitted processes in each control region is fixed.
+Table \ref{tab:ptWReweighting} lists the fitted slopes and uncertainties for each class of process.
+
+\begin{table}[htbp]
+\caption{ Linear correction factors obtained from a simultaneous fit to the \ptV\ distribution in data in the \WlnH\ control regions. }
+\label{tab:ptWReweighting}
+\begin{center}
+\begin{tabular}{c | c c c} 
+\hline
+Process                       &  \ttbar                 & \Wudscg\                & \Wbb\ + single top \\
+\hline
+\Fitted Slope (/\GeV)         & 0.000380 $\pm$ 0.000089 & 0.000575 $\pm$ 0.000046 & 0.00167  $\pm$ 0.00013  \\
+Norm preserving constant      & 1.064                   & 1.097                   &1.259    \\
+\hline
+$\Delta$Bkg at 100 GeV (\%)   & $2.6\pm0.89$            & $3.9\pm0.46$            & $9.2\pm3.6$           \\ 
+$\Delta$Bkg at 400 GeV (\%)   & $-8.8\pm3.6$            & $-13.3\pm1.8$           & $-40.9\pm5.2$           \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+The TOP group has observed similar MC mis-modelling of the reconstructed \ptV\ distribution for 
+\ttbar\ events simulated with Powheg [https://twiki.cern.ch/twiki/bin/view/CMS/TopPtReweighting].  
+Their prescription for correcting this effect is per-event re-weighting as a function of the 
+$\text{p}_T$(top) at generator level. 
+%In the \ZnnH\ and \ZllH\ channels the TOP re-weighting is applied to \ttbar\ simulation. 
+
+\subsection{Background normalization}
+
+Instead of using the theoretical cross sections with associated uncertainties to normalize the main analysis backgrounds,
+we conservatively assume zero a-priori knowledge of them, and determine them in situ as unconstrained nuisance parameters in the fit.
+These so-called ``normalization scale factors'' are correlated across the control regions and signal region,
+but uncorrelated between the boosted and resolved categories. This complete sovereignty reflects our ignorance
+of the cross sections' $\pt$ dependence, as well as the different reconstruction efficiency for the
+\HBB-like system in two fundamentally different approaches.
+Moreover, in the \WlnH\ channel, the ad-hoc W $\pt$ correction to account for said $\pt$ dependence 
+is not derived or applied in the boosted category.
+In principle, this approach is extremely conservative, and some way to partially link these
+scale factors could be thought of, but this should be approached carefully.
+
+The above is true for all the backgrounds except for the \Wb\ process in the \WlnH\ boosted category, which
+is so miniscule that we instead assign a Gaussian-constrained scale factor of $1 \pm 0.25$.
+
+The following table shows the normalization scale factors for the background processes, as determined (for now) only in the \WlnH\ channel:
+
+\begin{center}
+\begin{tabular}{r|rr} \hline\hline
+Process & \WlnH\ resolved & \WlnH\ boosted  \\ \hline
+\ttbar\ & $0.87 \pm 0.02$ & $0.53 \pm 0.03$ \\
+W+LF    & $1.06 \pm 0.05$ & $0.88 \pm 0.04$ \\
+\Wb\    & $2.44 \pm 0.13$ & $1.06 \pm 0.21$ \\
+\Wbb\   & $1.58 \pm 0.11$ & $1.32 \pm 0.4$  \\
+\hline\hline
+\end{tabular}
+\end{center}
+

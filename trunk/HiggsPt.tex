@@ -1,0 +1,99 @@
+\subsubsection{Higgs \pt for gluon fusion production}
+\label{sec:signalpt}
+
+%The normalization of the ggH process is obtained by accounting for the impact, at the level of inclusive rates and of differential \pt distribution, of the merging of samples characterised by different final-state multiplicities, and of the effects induced by top and bottom masses through heavy-quark loop diagrams. Both the merging and the heavy-quark masses must be included in the calculation in order to realistically predict the Higgs boson \pt~\cite{Frederix:2016cnl}. The impact of merging is dominant, but in kinematic regions dominated by large-\pt emissions, mass effects are not negligible but they can be factorized from the NLO corrections. For boosted Higgs production the effect of a finite top mass is well known: adding jets to the hard process pushes one or two gluon propagators off their respective mass shell~\cite{Buschmann:2014sia}, so matrix elements for Higgs production in association with one jet and two jets develop a top mass dependence~\cite{Buschmann:2014sia}. Top mass effects factorize for each number of hard jets to leading order and next-to-leading order, allowing to combine Higgs production in association with one and with two hard jets to optimally probe the structure of the Higgs–gluon coupling~\cite{Buschmann:2014sia}.
+%The total cross section for H$+$jet production receives moderate NNLO QCD corrections. For jets defined with the anti-k$_{\rm T}$ algorithm with \pt $>$ 30~\GeV, NNLO QCD corrections are of the order of 20\% for $\mu={\rm m_{H}}$~\cite{Boughezal:2015dra}.
+%(NNLO) increase with respect to LO of 44% (72%) for µ = mH and of 25% (31%) for µ = mH/2.
+%We adopt a $k$-factor of 1.5 from the N3LO corrections (missing ref?) to normalize the ggH production cross section.
+
+
+Computing the Higgs boson \pt for the gluon fusion production mode in the region of interest for the analysis poses a number of additional challenges. At low Higgs \pt dominant contributions come from the application of higher order corrections. When going from the leading order (LO) to the next to leading order (NLO) cross section, an increase of 60\% is present. Once this is extended to the highest order, currently ${\rm N^{3}LO}$ the cross section increase is more than a factor of 2. The reason for such a large increase in the production cross section results form the fact that the production is loop induced, which implies the process is very sensitive to higher order corrections. Loop induced processes must further deal with additional modifications at points where the energy scale of the loop becomes resolved. For Higgs production, this occurs at twice the mass of the particles that yield the dominant contribution in the loop, namely the bottom and top quarks. The addition of the low mass b quarks in the loop has the effect of sculpting the \pt distribution at the low end, extending up to $50\GeV$. The resolution of the top loop occurs at a $\pt$ of roughly $350\GeV$. For $\pt$ values above twice the top quark mass, the gluon fusion is found to be almost exclusively dependent on the top-Higgs coupling.  This Higgs \pt distribution is modified by the resolved loop inducing an additional deficit in the production of Higgs bosons at high \pt relative to the case where the loop is unresolved (the so-called Higgs EFT or $m_{\cPqt}\rightarrow\infty$ approximation). 
+
+To account for both the effects of higher order corrections and for the finite top mass loop we incorporate a multi-correction approach. This approach follows a variation of previously work from both \SHERPA and \MCATNLO authors~\cite{Buschmann:2014sia,Frederix:2016cnl}.  
+
+The dominant correction at large values of the Higgs $\pt$ originates from the finite top mass corrections to the loop induced processes. These can be produced at leading ``loop'' (Order) for the 0,1, and 2 jet Higgs production using the loop$_{\rm sm}$ model. Samples are generated with a jet threshold of $20\GeV$ and then showered under various showering scheme. 
+
+In order to validate the generation and showering of the loop induced Higgs production we consider several different showering schemes. For each of these schemes we use inclusively generated finite-top loop Higgs production as obtained from \MCATNLO. First, we consider the CMS default MLM merging here we using a merging scale of $\pt=30\GeV$. Secondly, we consider MLM with a modified scheme for showering. In particular the parameter JetMatching:exclusive is set to zero, which can induce double counting of parameters. Thirdly, we consider default configuration for CKKW showering. In previous studies, CKKW has been chosen as the default showering scheme\cite{Buschmann:2014sia}; following the reference it may have some advantages in phase coverage.  Finally, we consider the inclusive showering of a specified matrix element using the Pythia default showering scheme. The choice of these four different configurations allow for an additional gain in confidence since their production should be roughly the same. 
+
+Figure~\ref{fig:Higgs1j2j} shows the comparison of the Higgs \pt for the 1 and 2 jet production diagrams. From the diagrams we observe the expected scaling whereby the MLM contribution from the 1jet dominates where as the CKKW contribution comes mainly form the higher multiplicity 2jet final state. In each case, we find the respective production matches the inclusively showered production for the 1jet or 2jet final state considering MLM or CKKW respectively. Figure~\ref{fig:HiggsMerge} shows the summed \pt distributions compared with each other and with the two jet inclusive shower. Since we are concerned with very high jet \pt the inclusive 2jet should roughly cover the allowed phase space that is considered. From this plot, we conclude that the modified MLM and CKKW approaches along with the inclusively showered two jet production give a consistent Higgs \pt. We thus, use the CKKW merged sample as a comparison with additional generators. We treat this showered generator as the baseline leading order finite top mass generator for which we compare with the other respective generators.  
+
+\begin{figure}[hbtp]\begin{center}
+    \includegraphics[width=0.45\textwidth]{figures/higgspt/Merge_1j.png}
+    \includegraphics[width=0.45\textwidth]{figures/higgspt/Merge_2j.png} \\
+    \caption{Comparison of the Higgs \pt for (left) 1jet and (right) 2jet samples showered under 4 separate configurations: the Pythia default shower (Inc.), CMS default MLM showering, a modified MLM showering, and finally CKKW-L showering.} 
+ \label{fig:Higgs1j2j}
+ \end{center}
+ \end{figure}
+
+\begin{figure}[hbtp]\begin{center}
+    \includegraphics[width=0.65\textwidth]{figures/higgspt/Merged_inc.png}
+    \caption{Comparison of the summed 1jet and 2jet samples for loop induced Higgs production with the finite top mass taken into account. Additionally, the 2jet matrix element Higgs \pt is shown where the Pythia default showering is used.  }
+ \label{fig:HiggsMerge}
+ \end{center}
+ \end{figure}
+
+Figure~\ref{fig:Higgskfactor} compares the baseline madgraph generator with the two available generations in CMS. The first is CMS default \POWHEG production. The \POWHEG sample is generated with Higgs matrix elements up to 1 jet assuming the infinite top mass approximation (${\rm m_{top}}\rightarrow\infty$). An additional correction to the high \pt is applied through the use of the \emph{h-fact} parameter, which attempts to approximate the finite top mass corrections\cite{Bagnaschi:2015qta}, but is known to under predict at high Higgs \pt due in part to the arbitrary choice of damping and the lack of the second jet emission. Finally, when comparing the distributions we observe agreement within 20\% for all the distributions at 300\GeV. Secondly, we show the \MCATNLO NLO produced Higgs EFT; here merged for 0,1,2 jets with MLM. Both these two generators are normalized to the inclusive ${\rm N^{3}LO}$ cross section. From these distributions, we observe the merged finite to mass gives the smallest prediction. The NLO EFT is roughly 2.5 times larger than the finite top mass at a \pt of 500 \GeV and the \POWHEG is somewhere in between. Note that the EFT and finite top mass plots represent the current highest orders that can be run with a parton shower Monte Carlo. 
+
+\begin{figure}[hbtp]\begin{center}
+    %\includegraphics[width=0.45\textwidth]{figures/higgspt/HiggsBest.png}
+    \includegraphics[width=0.65\textwidth]{figures/higgspt/HiggsPtAllComp.pdf} 
+    \caption{Comparison of the Higgs \pt for a different set of generators as described in the text.}
+ \label{fig:Higgskfactor}
+ \end{center}
+ \end{figure}
+
+When going from the LO with finite top mass or EFT to highest available orders in both we follow two complementary approaches. Firstly, we consider the highest order Higgs+1jet production. This has been done in three separate ways (with and without the n-jettiness scheme) giving a similar order correction in all~\cite{Chen:2014gva,Boughezal:2013uia,Boughezal:2015dra,Boughezal:2015aha}. For each of the three ways, we find a $k$-factor for the NNLO correction with respect to the NLO correction of 1.25$\pm0.15$ which is roughly flat across \pt. We thus apply this scale factor to all predictions. Secondly, we take into account the finite top mass corrections. This we can perform in one of two ways. Take the NLO EFT and correct for LO ratio of finite top mass to that with the absence of the finite top mass~\cite{Chen:2016zka} or conversely, scaling the finite leading order finite top mass sample by the expected NLO/LO correction finite top mass correction\cite{Neumann:2016dny}. This second correction is not the full NLO finite top mass correction, since that correction is currently not available. Instead, it is the approximate NLO finite top mass correction obtained by expanding the EFT in powers of $1/m_{t}$ (NLO*).
+
+The resulting correction of the finite top mass with respect to the EFT is found to be between $0.4$ and $0.65$ at $500 \GeV$~\cite{Chen:2016zka}. For reference, we take a correction of 0.4, since the correction is \pt dependent but we don't have a derivation of the correction beyond 500~\GeV. The correction for the NLO finite top mass with respect to the leading order is found to be $2.0\pm0.5$ and flat as a function of $\pt$. Finally, we compare these two distributions in figure~\ref{fig:Higgskfactor}. We find the two distributions cross at a $\pt$ near $600\GeV$ with the two predictions within 10\% of each other. The cross is expected since the finite top mass correction to the EFT  will shrink at higher \pt making the EFT an over prediction at the highest \pt. We thus use the NLO* corrected finite top mass as the default spectra. The resulting $k$-factor with respect to the default \POWHEG is found to be $1.6\pm0.48$ at $500 \GeV$. We adopt a 30\% uncertainty following the addition in quadrature of the NNLO and NLO* uncertainties. The full $k$-factors are summarized in table~\ref{tab:kfactor}. Finally in figure~\ref{fig:Higgskfactor}, we compare this to other predictions from \SHERPA and \MCATNLO.  Both these distributions are extracted from their respective papers. For the \SHERPA distribution an additional correction based on the quoted acceptance of a dilepton selection is applied since their quoted \pt distribution is computed with the $\PH\rightarrow \PW\PW$  after a loose dilepton selection. Additionally, in both cases, we have added the additional NNLO scale factor to the cross section for the \SHERPA and an NNLO $k$-factor for \MCATNLO, although from the inclusive cross section a factor of $1.5$ (NLO) as opposed to $1.5\times1.25$ (NNLO) may be more appropriate to yield the current $N^{3}LO$ prediction. Adding the additional NNLO $k$-factor brings the distribution of the 3 predictions to within 20\% agreement.
+
+
+In Fig.~\ref{fig:Higgspt}, the corrections are shown along with the corrected Higgs \pt distribution.
+%Finally, we would like to mention that we have contacted the authors of ~\cite{Neumann:2016dny} and they are helping us prepare a more robust prediction in our phase space. 
+
+\begin{table}[htbp]
+\topcaption{Higgs $k$-factors}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llll}
+\hline
+Sample & Yield ($fb^{-1}$)& Order & $k$-factor to \POWHEG \\
+ & (\pt$>500~\GeV$)  & \\
+\hline
+{\small CMS default \POWHEG } & 12.5   & NLO &  1\\
+{\small NLO EFT NNLO $k$-factor Mass corr  } & 28.9,36.1,$19^{+5}_{-4}$  & NLO,NNLO,NNLO+m$_{t}$ &  1.5$\pm$0.4\\
+{\small LO $m_{t}$ NNLO and NLO* $k$-factor} & 7.8,15.6,$19.5^{+6}_{-6}$ & LO,NLO*,NNLO+m$_{t}$ &  1.6$\pm$0.5\\
+\hline
+\end{tabular}}
+\label{tab:kfactor}
+\end{table}
+
+\begin{figure}[hbtp]\begin{center}
+    \includegraphics[width=0.7\textwidth]{figures/Hptspectrumcorrected.pdf}
+\caption{Generator level Higgs \pt distribution for the gluon fusion production mode. The CMS default \POWHEG sample and the corrected spectrum to account for both higher order and finite top mass effects are compared.}
+ \label{fig:Higgspt}
+ \end{center}
+ \end{figure}
+
+
+%%% Old crap
+%Figure~\ref{fig:higgspt} shows the resulting comparison of the showered Higgs \pt with the default \POWHEG and additional models from the \SHERPA authors~\cite{Buschmann:2014sia}, the Madgraph authors~\cite{Frederix:2016cnl}. Both these distributions are extracted from their respective papers. For the \SHERPA distribution an additional correction based on the quoted acceptance of a dilepton selection is applied since their quoted \pt distribution is computed with the ${\rm H\rightarrow WW}$  after a loose dilepton selection. Finally, we present two additional distributions $\phi_{{\rm matched}}$ which corresponds to the dark matter scalar simplified model of a mediator decaying to b-quarks produced by loop-induced process and corrected for the branching ratios. Secondly, we present the default \POWHEG distributions. When comparing to the default \POWHEG sample, we observe a scale factor of 1.5 for $\pt^{\PH} > 500 \GeV$. In addition to the correction of 1.5 for using the second jet merged sample, an additional correction corresponding the NLO 1 and 2-jet sample is applied on top of the merged sample. This factor of 1.5 can be obtained from the calculation of the inclusive cross section in the \MCATNLO relative to the ${\rm N^{3}LO}$ cross section~\cite{deFlorian:2016spz}. It is additionally derived for the specific jet bins in the \SHERPA paper. Figure~\ref{fig:higgspt} also shows the impact of the additional 1.5 $k$-factor. The combined $k$-factors give a total increase in cross section of $2.36$ for a Higgs \pt$> 500$\GeV. Some care has to be taken for these corrections since the fundamental process is still leading order, which gives an uncertainty of potentially O(50\%) on the total production. 
+
+%\begin{figure}[hbtp]\begin{center}
+%    \includegraphics[width=0.45\textwidth]{figures/higgspt/higgspt_nokfactor.png}
+%    \includegraphics[width=0.45\textwidth]{figures/higgspt/higgspt_kfactor.png} \\
+%    \caption{Comparison of the Higgs \pt for a different set of generators where the NLO $k$-factor is \emph{not} applied (left) and the NLO $k$-factor is applied (right)} 
+% \label{fig:higgspt}
+% \end{center}
+% \end{figure}
+
+
+\subsubsection{Higgs \pt for VBF}
+The Higgs \pt spectrum for the VBF production mode is reweighted to account for higher order (${\rm N^{3}LO}$) corrections to the cross section. The ${\rm N^{3}LO}$ \pt spectrum is shown in Fig.~\ref{fig:VBFpt} and compared to the lowest order calculations. The impact of the highest order corrections to LO is within few\% at high \pt. This is from private communication with the authors of this paper~\cite{Cacciari:2015jma}. The corrections have negligible effect to the yield for this process in the phase space selected by requiring \pt$>450$~\GeV. 
+
+\begin{figure}[hbtp]\begin{center}
+    \includegraphics[width=0.7\textwidth]{figures/ptH-log.pdf}
+    \caption{Comparison of the Higgs \pt for different order of corrections to the VBF cross section.}
+ \label{fig:VBFpt}
+ \end{center}
+ \end{figure}
+
+

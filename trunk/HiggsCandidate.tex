@@ -1,0 +1,64 @@
+\textcolor{red}{Note this section contains a comparison before including the Higgs \pt corrections. }
+
+We considered two methods to select $\PH(\bbbar)$ candidate:
+\begin{enumerate}
+\item choosing the selected AK8 PUPPI jet ($\pt > 500\GeV, m_{\mathrm{SD}} > 40\GeV, |\eta|<2.5, \nsubddt<0.55$) leading in $\pt$ (default), or
+\item choosing the selected AK8 PUPPI jet ($\pt > 500\GeV, m_{\mathrm{SD}} > 40\GeV, |\eta|<2.5, \nsubddt<0.55$) leading in double-b tag discriminator value (alternative).
+\end{enumerate} 
+We compare the $S/\sqrt{B}$ in different bins and the 95\% CL expected limit on the signal strength $\mu$ for $36.4\fbinv$ using the asymptotic formulae. We found no significant improvement in the $S/\sqrt{B}$ or the expected limit with the alternative Higgs candidate selection (leading double-b tag) with respect to the default (leading $\pt$).
+
+Fig.~\ref{fig:stackSR_ptleading} shows the signal region \mSD distribution for simulated signal and background events in both the failing and passing double-b tagging categories when using the leading $\pt$ jet as the Higgs candidate, while Fig.~\ref{fig:stackSR_bbleading} shows the same distributions when using the leading double-b tagged jet as the Higgs candidate.
+
+\begin{figure}[hbtp]\begin{center}
+    \subfigure[double-b tag $<$ 0.9]{\includegraphics[width=0.48\textwidth]{figures/bbleading/stack_msd_ak8_topR6_fail_log.pdf}}
+    \subfigure[double-b tag $>$ 0.9]{\includegraphics[width=0.48\textwidth]{figures/bbleading/stack_msd_ak8_topR6_pass_log.pdf}}
+	\caption{Signal region \mSD distribution for simulated signal and background events after all the selection criteria in both the failing (left) and passing (right) double-b tagging categories when using the leading $\pt$ jet as the Higgs candidate.}
+	\label{fig:stackSR_ptleading}
+	\end{center}
+ \end{figure}
+
+\begin{figure}[hbtp]\begin{center}
+    \subfigure[double-b tag $<$ 0.9]{\includegraphics[width=0.48\textwidth]{figures/bbleading/stack_msd_ak8_bbleading_topR6_fail_log.pdf}}
+    \subfigure[double-b tag $>$ 0.9]{\includegraphics[width=0.48\textwidth]{figures/bbleading/stack_msd_ak8_bbleading_topR6_pass_log.pdf}}
+	\caption{Signal region \mSD distribution for simulated signal and background events after all the selection criteria in both the failing (left) and passing (right) double-b tagging categories when using the leading double-b tagged jet as the Higgs candidate.}
+	\label{fig:stackSR_bbleading}
+	\end{center}
+ \end{figure}
+
+To derive the expected limit, we use the \texttt{combine} package and the asymptotic method. We scan the profile likelihood test statistic  $-2\Delta\log(\mathcal{L})$ on the asimov dataset derived by summing the background MC for the QCD, $\ttbar$, $W(\Pq\Pq)$, and $Z(\Pq\Pq)$ processes both with profiling the QCD transfer factor nuisance parameters (``stat$+$syst'') and without (``stat only''). Fig.~\ref{fig:deltaLL_higgscand} shows both types of scans for both Higgs candidate selection scenarios and Tab.~\ref{tab:expectedLimits_higgscand} lists the corresponding ``stat$+$syst'' expected limits. The median expected limit improves by 3\% from $3.77$ to $3.64$, which is negligible compared to the 68\% CL band divided by two (33\% of the median expected limit). 
+
+Given this, we choose the AK8 PUPPI jet with leading \pt as the default $\PH(\bbbar)$ candidate.
+
+\begin{figure}[hbtp]
+\centering
+    \subfigure[leading $\pt$]{\includegraphics[width=0.48\textwidth]{figures/bbleading/deltaLL_sortByPt.pdf}}
+    \subfigure[leading double-b tag]{\includegraphics[width=0.48\textwidth]{figures/bbleading/deltaLL_sortByDoubleB.pdf}}
+	\caption{Profile Likelihood test statistic $-2\Delta\log(\mathcal{L})$ scan as a function of the signal strength $\mu$ on the asimov dataset when choosing the leading $\pt$ jet as the $\PH(\bbbar)$ candidate (left) and choosing the leading double-b tagged jet as the $\PH(\bbbar)$  candidate (right). The solid black curve, labeled ``stat$+$syst,'' corresponds to the scan when profiling the QCD transfer factor nuisance parameters and the dotted blue curve, labeled ``stat only,'' corresponds to the scan holding all other parameters fixed to their best-fit values. The expected 95\% CL upper limit on $\mu$ with or without the QCD TF systematic uncertainty corresponds to the $\mu$ value for which the corresponding test statistic curve intersects $-2\Delta\log(\mathcal{L}) = 3.84$}
+	\label{fig:deltaLL_higgscand}
+ \end{figure}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{l|l}
+\hline
+Leading $\pt$ Higgs candidate& \\
+\hline
+ Expected limit 2.5\% & $\mu<2.03$\\
+ Expected limit 16.0\% & $\mu<2.73$\\
+ Expected limit 50.0\% & $\mu<3.77$\\
+ Expected limit 84.0\% & $\mu<5.25$\\
+ Expected limit 97.5\% & $\mu<6.97$\\
+\hline
+Leading double-b tag Higgs candidate& \\
+\hline
+ Expected limit 2.5\% & $\mu<1.97$\\
+ Expected limit 16.0\% & $\mu<2.62$\\
+ Expected limit 50.0\% & $\mu<3.64$\\
+ Expected limit 84.0\% & $\mu<5.04$\\
+ Expected limit 97.5\% & $\mu<6.71$\\
+\hline
+\end{tabular}
+\caption{``Stat$+$syst'' expected limits for $36.4\fbinv$ from \texttt{combine} including the QCD transfer factor parametric systematic uncertainty.
+\label{tab:expectedLimits_higgscand}}
+\end{table}
+

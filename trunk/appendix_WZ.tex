@@ -1,0 +1,97 @@
+
+The $\PW$ and $\PZ+$jets backgrounds are used to validate the signal extraction procedure. We perform the signal extraction separately for the $\PW$ and $\PZ$ signal together and $\PZ$ signal only.
+The latter case is closer to the H signal extraction. We use data corresponding to $35.9\fbinv$ and we explicitly veto 3 bins in the jet \mSD distribution centered around the Higgs boson mass (110-131 GeV)\footnote{\textcolor{red}{This test was made before removing the cut on the number of additional jets.}}.
+
+
+Fig.~\ref{fig:deltaLLWZ} and ~\ref{fig:deltaLLZ} show the profile likelihood test statistic scan in $\mu$ on the asimov dataset and data for $\PW+\PZ$ and $\PZ$-only signals. Tab.~\ref{tab:expectedSig} lists the corresponding expected and observed significance for the two cases.
+
+
+\begin{figure}[hbtp]
+\centering
+\subfigure[$\PW+\PZ$ asimov]{\includegraphics[width=0.48\textwidth]{figures/WZ-asimov.pdf}}
+\subfigure[$\PW+\PZ$ data]{\includegraphics[width=0.48\textwidth]{figures/WZ-data}}
+        \caption{Profile Likelihood test statistic
+          $-2\Delta\log(\mathcal{L})$ scan as a function of the signal
+          strength $\mu$ on the asimov and real dataset for $\PW$ and $\PZ$ signals. The solid black curve,
+          labeled ``stat$+$syst,'' corresponds to the scan when
+          profiling all nuisance parameters and the dotted blue curve,
+          labeled ``stat only,'' corresponds to only profiling the
+          unconstrained nuisance parameters: QCD transfer factor
+          parameters and the $\ttbar$ scale factors. }
+        \label{fig:deltaLLWZ}}
+ \end{figure}
+
+\begin{figure}[hbtp]
+\centering
+\subfigure[$\PZ$ asimov]{\includegraphics[width=0.48\textwidth]{figures/Z-asimov.pdf}}
+\subfigure[$\PZ$ data]{\includegraphics[width=0.48\textwidth]{figures/Z-data}}
+        \caption{Profile Likelihood test statistic
+          $-2\Delta\log(\mathcal{L})$ scan as a function of the signal
+          strength $\mu$ on the asimov and real dataset for $\PZ$ only signal. The solid black curve,
+          labeled ``stat$+$syst,'' corresponds to the scan when
+          profiling all nuisance parameters and the dotted blue curve,
+          labeled ``stat only,'' corresponds to only profiling the
+          unconstrained nuisance parameters: QCD transfer factor
+          parameters and the $\ttbar$ scale factors. }
+        \label{fig:deltaLLZ}}
+ \end{figure}
+
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ll}
+\hline\hline
+$\PW+\PZ$ & \\
+\hline\hline
+Best fit   & $\mu =0.78^{-0.19}_{+0.25}$ \\
+Observed significance & $4.6\sigma$ \\
+Expected significance & $5.1\sigma$ ($\mu=0.78$)\\
+Expected significance & $5.6\sigma$ ($\mu=1$)\\
+\hline\hline
+Z & \\
+\hline\hline
+Best fit   & $\mu =0.96^{-0.20}_{+0.24}$ \\
+Observed significance & $5.2\sigma$ \\
+Expected significance & $5.6\sigma$ ($\mu=0.96$)\\
+Expected significance & $5.7\sigma$ ($\mu=1$)\\
+\hline\hline
+
+\end{tabular}
+\caption{Fitted signal strength, expected and observed significance for $35.9\fbinv$ from
+  \texttt{combine}.
+\label{tab:expectedSig}}
+\end{table}
+\clearpage
+
+
+\subsection{Fit closure}
+The closure of the $\PW+\PZ$ and $\PZ$ fit is tested in the blinded data, in which we veto
+3 bins in the jet \mSD distribution centered around the Higgs boson
+mass ($110$-$131\GeV$) corresponding to $35.9\fbinv$ of data.  The result of the closure
+studies are shown in Figure~\ref{fig:pullDataWZ} assuming signal strength equal to 1 and including all the systematic uncertainties.
+
+From the observed fits, we do not observe
+any significant deviation but pulls are not found to be consistent with unity.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/WZ1pulls.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Z1pulls.pdf}\\
+ \caption{The pull distribution from generating off the best fit distribution and fitting with the default signal extraction method, for $\PW+\PZ$ (left) and $\PZ$ (right) signals.}
+
+ \label{fig:pullDataWZ}
+ \end{figure}
+
+We investigated this and we found some systematic uncertainties are constrained from the W/Z signals, resulting in a conservative uncertainty on $\mu$.
+By freezing a subset of systematic uncertainties~\footnote{znormEWcat5, wznormEWcat5, znormEWcat6, wznormEWcat6, znormEWcat2, wznormEWcat2, znormEWcat3, wznormEWcat3, znormEWcat4, wznormEWcat4, znormEWcat1, wznormEWcat1, bbeff, JER, smear, znormQ, mcstat} and repeating the closure test, pulls are found to be consistent with unity, see Fig.~\ref{fig:pullDataWZ1}.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/WZpulls.png}
+\includegraphics[width=0.49\textwidth]{figures/Zpulls.png}\\
+ \caption{The pull distribution from generating off the best fit distribution and fitting with the default signal extraction method, for $\PW+\PZ$ (left) and $\PZ$ (right) signals, after freezing a subset of systematic uncertainties.}
+
+ \label{fig:pullDataWZ1}
+ \end{figure}
+
+

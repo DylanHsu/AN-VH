@@ -1,0 +1,260 @@
+\subsection{Muon trigger/ID/Isolation efficiency}
+\label{sec:muonidis}
+
+The muon trigger, loose ID, and loose isolation efficiencies are
+measured directly in data based on a tag-and-probe method as a function of muon $\pt$ and $\eta$ as
+indicated in Ref.~\cite{CMS-MUO-TWIKI-SF}. These efficiencies are
+different for the Run2016BCDEF and Run2016GH data-taking periods. We
+average the two measurements according to the integrated luminosities
+corresponding to those data-taking periods ($16.1 \fbinv$ for
+Run2016GH and $19.7\fbinv$ for Run2016BCDEF). Then, we apply an event-by-event weight (and
+uncertainty) to the MC samples in the single muon control region depending on the $\pt$ and $\eta$ of
+the selected muon.
+
+The trigger efficiency is accounted for as a 1\% 
+
+\subsection{Systematics for W/Z + jets}
+
+Other sub-dominant backgrounds come from inclusive \PW~and \PZ production.
+We will measure the cross-sections {\it in situ} using the \PW~and \PZ signals in the data.
+There are corrections to these cross-sections for these processes from NNLO k-factors and also from reweighting the LO \pt distribution to NLO.
+Uncertainties on the W/Z cross-sections are \pt dependent due to the uncertainties growing at higher \pt from higher order effects.
+These are correlated per \pt bin to account for some \pt dependent deviations from the higher order corrections.
+An additional systematic of 5\% is included to account for potential differences between the W and Z higher order corrections.
+
+The \PW~and \PZ lineshapes and rates are also affected by the tagging efficiency and effects such as jet mass scale and resolution.
+
+When considering the process where a vector boson decays to jets $V\rightarrowqq$ an ambiguity arises in the selection of the jet. The chosen jet can either be from hadrdonically decaying vector boson or it can arise from one of the jets produced in the sample. Since vector boson events with a $\pt > X$ will have a recoiling jet with a \pt that is roughly equivalent it is not unusual for the selected jet to \emph{not} be from the vector boson. These jets, the unmatched component, consist of QCD jets and should behave more like QCD background jets than tagged boson jets. We let this be treated as QCD background by the fit. 
+
+
+\subsubsection{Merged $\PW$ jet signal extraction in semi-leptonic top control region}
+\label{sec:sysWZ}
+
+The efficiency of our $\PV$-tag selection using substructure ($\nddt$) is measured in a separate semi-leptonic top control region in data within the JetMET POG. 
+
+The semileptonic $t\bar{t}$ control sample is selected by requiring one lepton and the presence of $b$ jets.
+This provides a pure sample of $t\bar{t}$ events from which we isolate those with the particular topology of boosted $\PW$ bosons.
+From this sample we can derive the data/MC scale factor based on the $n_\text{pass} / n_\text{fail}$ in each of the data and MC.
+Care must be taken to isolate the real merged $\PW$ bosons and simultaneous fits are performed for the fail and pass samples including
+contributions for both the continuum background and merged \PW signals.
+
+The related scale factors are: for the jet mass scale, $1.001 \pm 0.004$ and for jet mass resolution, $1.084 \pm 0.090$, and for $\nddt$, $0.993 \pm 0.043$. 
+
+\begin{figure}[hbtp]\begin{center}
+    \includegraphics[width=0.48\textwidth]{figures/CombinedPlot_model_data_em.pdf}
+	\includegraphics[width=0.48\textwidth]{figures/CombinedPlot_model_data_failN2DDTcut_em.pdf}
+    \caption{ Passing and failing fits in the semileptonic $t\bar{t}$ sample. }
+ \label{fig:gbvmexpected}
+ \end{center}
+ \end{figure}
+
+%In addition, we use the sample provide an uncertainty on the jet mass scale and resolution.
+%This gives us the freedom for the W, Z, and Z' signal shape to float.
+We allow the peak position and resolution to vary within uncertainties using shape templates, displayed in Fig.~\ref{fig:scalesmear_WZH}.
+
+\begin{figure}[hbtp]\centering
+    \subfigure[scale for $\PZ+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/zqq_pass_cat1_scale.pdf}}
+    \subfigure[smear for $\PZ+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/zqq_pass_cat1_smear.pdf}}\\
+    \subfigure[scale for $\PW+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/wqq_fail_cat1_scale.pdf}}
+    \subfigure[smear for $\PW+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/wqq_fail_cat1_smear.pdf}}\\
+    \subfigure[scale for $\Pg\Pg\PH(\bbbar)$]{\includegraphics[width=0.48\textwidth]{figures/validation/hqq125_pass_cat1_scale.pdf}}
+    \subfigure[smear for $\Pg\Pg\PH(\bbbar)$]{\includegraphics[width=0.48\textwidth]{figures/validation/hqq125_pass_cat1_smear.pdf}}
+	\caption{Effect of varying the jet mass scale by $\pm10\sigma$ and the jet mass resolution by $\pm2\sigma$ for $\PW/\PZ+$jets and the signal $\Pg\Pg\PH(\bbbar)$ in $\pt$ category 1 ($450< \pt < 500 \GeV$).}
+	\label{fig:scalesmear_WZH}
+\end{figure}
+
+
+\subsubsection{JER and JES}
+\label{sec:sysJERJES}
+
+We check the effect of varying the JER and JES by $\pm1\sigma$ for $\PW/\PZ+$jets, $\ttbar$, and the $\PH(\bbbar)$ signal processes in each $\pt$ category and apply a log-normal normalization uncertainty equal to the relative size of the effect.
+
+We also include a \pt dependent mass scale uncertainty, according to the variations at high \pt observed in the soft-drop mass corrections, as can be seen in Fig.~\ref{fig:jmcfits}, that corresponds to a mass scale shift of ~0.5\%/100~\GeV in \pt.
+
+% $\pt$ category 1 ($450< \pt < 500 \GeV$) is shown in Fig.~\ref{fig:JERJES_WZH}.
+
+%\begin{figure}[hbtp]\centering
+%    \subfigure[JER for $\PZ+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/zqq_pass_cat1_JER.pdf}}
+%    \subfigure[JES for $\PZ+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/zqq_pass_cat1_JES.pdf}}\\
+%    \subfigure[JER for $\PW+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/wqq_fail_cat1_JER.pdf}}
+%    \subfigure[JES for $\PW+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/wqq_fail_cat1_JES.pdf}}\\
+%    \subfigure[JER for $\Pg\Pg\PH(\bbbar)$]{\includegraphics[width=0.48\textwidth]{figures/validation/hqq125_pass_cat1_JER.pdf}}
+%    \subfigure[JES for $\Pg\Pg\PH(\bbbar)$]{\includegraphics[width=0.48\textwidth]{figures/validation/hqq125_pass_cat1_JES.pdf}}
+%	\caption{Effect of varying the JER and JES by $\pm1\sigma$ for $\PW/\PZ+$jets and the signal $\Pg\Pg\PH(\bbbar)$ in $\pt$ category 1 ($450< \pt < 500 \GeV$).}
+%	\label{fig:JERJES_WZH}
+%\end{figure}
+
+\subsubsection{MC statistics}
+\label{sec:sysmcstat}
+
+For each process, $\PW/\PZ+$jets, $\ttbar$, and the $\PH(\bbbar)$
+signal processes, we vary each distribution by $\pm1\sigma$ of the
+statistical uncertainty (based on the square root of the sum of the squared weights) and apply a log-normal normalization
+uncertainty equal to the relative size of the effect.
+
+%. Each variation for each process is incorporated as an
+%independent nuisance parameter. We prune (i.e. remove) those nuisance
+%parameters for which the statistical uncertainty in the bin is less then 50\% of
+%the yield in the bin (for each process). Fig.~\ref{fig:mcstat_WZH}
+%shows some representative $\pm1\sigma$  variations.
+
+%\begin{figure}[hbtp]\centering
+%    \subfigure[MC stat. uncertainty for $\PZ+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/zqq_pass_cat1_zqqpasscat1mcstat8.pdf}}
+%    \subfigure[MC stat. uncertainty for $\PW+$jets]{\includegraphics[width=0.48\textwidth]{figures/validation/wqq_fail_cat1_wqqfailcat1mcstat7.pdf}}\\
+%    \subfigure[MC stat. uncertainty for $\Pg\Pg\PH(\bbbar)$]{\includegraphics[width=0.48\textwidth]{figures/validation/hqq125_pass_cat1_hqq125passcat1mcstat12}}
+%	\caption{Three examples of shape templates ($\pm1\sigma$) for the MC statistic nuisance parameters for $\PW/\PZ+$jets and the signal $\Pg\Pg\PH(\bbbar)$ in $\pt$ category 1 ($450< \pt < 500 \GeV$).}
+%	\label{fig:mcstat_WZH}
+%\end{figure}
+
+\subsubsection{double-b tagging uncertainty}
+\label{sec:btag}
+
+The efficiency of the double-b tagger is measured in the data sample, consisting of high \pt AK8 jets enriched in $\bbbar$ from gluon splitting.
+% by requiring at least two muons to be matched to the jet. 
+In order to select topologies as similar as possible to a signal jet, the AK8 jet has $\pt >300\GeV$ and mass $>50\GeV$, it has also to be matched to at least two muons, each with $\pt > 7$ GeV and $|\eta|< 2.4$. 
+
+The efficiency of the double-b tagger is measured in data and MC for four different operating points by the BTV-POG~\cite{CMS-PAS-BTV-15-002}. The measurement relies on the Jet Probability (JP) discriminant, for which the expected simulated distributions (``templates") are different for the various jet flavors. The fraction of b (from gluon splitting) jets is estimated by fitting the data distribution of the JP variable with the templates. This so-called Lifetime Tagging (LT) method~\cite{Chatrchyan:2012jua} is also used to perform the measurement of the b jet identification efficiency scale factors for the standard anti-$\kt$ $R = 0.4$ (AK4) jets~\cite{CMS-PAS-BTV-15-001}. No significant bias due to the di-muon requirement, in the efficiency evaluation has been found. 
+
+We are applying the SF provided by the BTV POG which is $0.91\pm0.03$~\cite{BTV-TWIKI}.
+%\textcolor{red}{We do not include the SF and the relative uncertainty in our results yet. It will be done in the next iteration}.
+
+
+\subsection{Determination of H mass tagging uncertainties \label{HtaggingUnc}}
+
+The uncertainties on the $\PW$ mass tagging are well estimated using semi-leptonic \ttbar sample that is a generous source of boosted hadronic $\PW$ bosons~\cite{CMS-PAS-JME-16-003}. The SF and associated uncertainty for mass tagging and $\nddt$ tagging is known. 
+
+In order to estimate the uncertainty for Higgs mass tagging and $\nddt$ selection, a double ratio estimate between Bulk Graviton decaying to $\PW\PW$ and $\PH\PH$ is performed, choosing a mass window for the $\PW$ and the $\PH$, in order to calculate the ratio of efficiency between them for \PYTHIA and \HERWIG showering algorithms. Subsequently, the double ratio $R_{\HERWIG}/R_{\PYTHIA}$ ($R_{\HERWIG}=\epsilon_{\mathrm{hh}}^{\HERWIG}/\epsilon_{\mathrm{WW}}^{\HERWIG}$, $R_{\PYTHIA}=\epsilon_{\mathrm{hh}}^{\PYTHIA}/\epsilon_{\mathrm{WW}}^{\PYTHIA}$) is calculated. The double ratio provides an estimate of how different showering algorithms handle the difference between hadronically decaying \PW~ and \PH~. Results are shown in Tab.~\ref{tab:WideWindow} and Fig.~\ref{fig:ratioHP} for the substructure selection used in this analysis.
+A similar study for $\tau_{21}$ selection is reported in ~\cite{AN-16-377, AN-16-300}, in the context of searches for resonances decaying to VH and HH.
+
+\begin{sidewaystable}[!htb]
+  \begin{center}
+\caption{The per-jet efficiency of requiring the mass of Higgs (W) jets to
+be within 105--135 (65--105) \GeV. The efficiency is evaluated with the $G_\mathrm{bulk}\rightarrow \mathrm{hh} (\mathrm{WW})$ samples.\label{tab:WideWindow}}
+% Each AK8 jet is required to
+%match to the generator-level boson within a $\Delta R$ of 0.4.  \label{tab:WideWindow}}
+  \begin{tabular}{c|rrrrrrr}
+\hline\hline
+\multicolumn{8}{c}{$\nddt$ } \\
+\hline
+$M_{G_\mathrm{bulk}}$ [GeV] &  $\epsilon_{\mathrm{hh}}^{\HERWIG}$ &  $\epsilon_{\mathrm{WW}}^{\HERWIG}$ & $\epsilon_{\mathrm{hh}}^{\HERWIG}/\epsilon_{\mathrm{WW}}^{\HERWIG}$
+                                         &  $\epsilon_{\mathrm{hh}}^{\PYTHIA}$ &  $\epsilon_{\mathrm{WW}}^{\PYTHIA}$ &  $\epsilon_{\mathrm{hh}}^{\PYTHIA}/\epsilon_{\mathrm{WW}}^{\PYTHIA}$ &  $R_{\HERWIG}/R_{\PYTHIA}$ \\
+\hline
+1000 & 0.275 $\pm$ 0.003 & 0.481 $\pm$ 0.009 & 0.572 $\pm$ 0.025 & 0.298 $\pm$ 0.004 & 0.514 $\pm$ 0.007 & 0.580 $\pm$ 0.016 & 0.987 $\pm$ 0.058 \\
+2000 & 0.307 $\pm$ 0.004 & 0.473 $\pm$ 0.007 & 0.649 $\pm$ 0.018 & 0.324 $\pm$ 0.004 & 0.496 $\pm$ 0.007 & 0.654 $\pm$ 0.017 & 0.993 $\pm$ 0.055 \\
+3000 & 0.329 $\pm$ 0.004 & 0.518 $\pm$ 0.007 & 0.647 $\pm$ 0.017 & 0.329 $\pm$ 0.004 & 0.513 $\pm$ 0.007 & 0.642$\pm$ 0.017 & 0.992 $\pm$ 0.054 \\
+
+\hline
+\hline
+
+\end{tabular}
+\end{center}
+\end{sidewaystable}
+
+
+\begin{figure}[!htb]
+ \centering
+   \includegraphics[width=.6\textwidth]{figures/HtaggingUnc.pdf}
+ \caption{ $R_{\HERWIG}
+/R_{\PYTHIA}$ as function of the jet \pt, and parametrized as a function of the jet $\pt$. The function chosen to fit the points is $a\cdot \log(\pt + b)$, and the fitted values are $a =0.102$, $b =15724\GeV$.}
+ \label{fig:ratioHP}
+\end{figure}
+
+
+
+
+\clearpage
+\subsection{Summary of systematic uncertainties}
+
+A summary of the systematic uncertainties considered in this analysis and their relative size is tabulated in Tab.~\ref{tab:systematics}. The table is split into two subtables. 
+In Tab.~\ref{tab:systematics2} the nuisance treatment of W and Z components of the fit is specified, reporting the various components of the fit and if they are correlated to the different fit components.
+
+
+\begin{table}[!h]
+\begin{center}
+\caption{Systematic uncertainties and their relative size.}
+\label{tab:systematics}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{ccc}
+\hline\hline
+Systematic uncertainty source & Type (shape or normalization) & Relative size (or description) \\
+\hline\hline
+QCD transfer factor        & both & \small{float $a_{k\ell}$ and QCD normalization}\\
+Luminosity         & normalization &  $2.5\%$ \\
+$\PV$-tag ($\nddt$) efficiency & normalization & $4.3\%$\\
+Muon veto efficiency   & normalization & $0.5\%$ \\
+Electron veto efficiency   & normalization & $0.5\%$ \\
+Trigger efficiency & normalization & $4\%$\\
+Muon ID efficiency   & shape & up to $0.2\%$  \\
+Muon isolation efficiency   & shape & up to $0.1\%$ \\
+Muon trigger efficiency   & shape & up to $8\%$ \\
+$\ttbar$ normalization SF         & normalization & from $1\mu$ CR: $8\%$ \\
+$\ttbar$ double-$\cPqb$ mis-tag SF         & normalization & from $1\mu$ CR: $15\%$ \\
+$\PW/\PZ$ NLO QCD corrections & normalization & $10\%$\\
+$\PW/\PZ$ NLO EWK corrections per $\pt$ bin & normalization & $15\%-35\%$\\
+$\PW/\PZ$ NLO EWK ratio decorrelation per $\pt$ bin & normalization & $5\%-15\%$\\
+double-$\cPqb$ tagging efficiency          & normalization & $4\%$ \\
+Jet energy scale              & normalization & up to $10\%$\\
+Jet energy resolution              & normalization & up to $15\%$\\
+Jet mass scale              & shape & shift $\mSD$ peak by $\pm0.4\%$ \\
+Jet mass resolution              & shape & smear $\mSD$ distribution by $\pm9\%$ \\
+Jet mass scale $\pt$              & normalization & $0.4\%/100\GeV$ ($\pt$) \\
+%Higgs (NLO $+$ finite top mass) \pt corrections & normalization & $50\%$ \\
+%Ren./fac. scale & - & - \\
+%Parton distribution functions & - & - \\
+Monte Carlo statistics        & normalization & - \\
+$\PH~\pt$ correction (gluon fusion)   & both & 30\%\\
+\hline\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+
+\begin{table}[!ht]
+\begin{center}
+\caption{Systematic uncertainties for $\PW/\PZ$ signals and their correlations. Symbols refer to wheter each systematic applies ($\times$) or not (-), and in case if it is correlated ($\checkmark$) between the two processes. }
+\label{tab:systematics2}
+%\resizebox{\columnwidth}{!}{
+\begin{tabular}{ccc}
+\hline\hline
+Systematic uncertainty source &  $\PW$  & $\PZ$ \\
+\hline
+Luminosity         & $\checkmark$ &  $\checkmark$ \\
+$\PV$-tag ($\nddt$) efficiency &  $\checkmark$ &  $\checkmark$\\
+Muon veto efficiency   &  $\checkmark$ &  $\checkmark$ \\
+Electron veto efficiency   &  $\checkmark$ &  $\checkmark$ \\
+Trigger efficiency &   $\checkmark$ &  $\checkmark$\\
+$\ttbar$ double-b mis-tag SF         & $\times$ &  - \\
+$\PW/\PZ$ NLO QCD corrections & $\checkmark$ &  $\checkmark$\\
+$\PW/\PZ$ NLO electroweak corrections & $\checkmark$ &  $\checkmark$\\
+$\PW/\PZ$ ratio & $\times$ & -\\
+Double-b tagging efficiency          & - & $\times$ \\
+Jet energy scale              & $\checkmark$ &  $\checkmark$\\
+Jet energy resolution              & $\checkmark$ &  $\checkmark$ \\
+Jet mass scale              & $\checkmark$ &  $\checkmark$ \\
+Jet mass resolution              & $\checkmark$ &  $\checkmark$\\
+%Higgs (NLO $+$ finite top mass) \pt corrections & normalization & $50\%$ \\
+%Ren./fac. scale & - & - \\
+%Parton distribution functions & - & - \\
+Monte Carlo statistics        & $\times$ &  $\times$ \\
+\hline\hline
+\end{tabular}
+%}
+\end{center}
+\end{table}
+
+
+\clearpage
+
+\subsection{Pre- and post-fit systematic uncertainties}
+
+
+Fig.~\ref{fig:impactsasimov} shows the pulls of the constrained nuisance parameters as well as the impacts on the signal
+strength when fitting the signal$+$background asimov dataset ($\mu=1$).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.72\textwidth]{figures/results/impacts_2017_03_29_asimov.pdf}
+	\caption{Impacts when fitting the signal+background asimov
+         dataset ($\mu=1$). 
+	\label{fig:impactsasimov}}
+ \end{figure}

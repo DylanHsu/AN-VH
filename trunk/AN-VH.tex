@@ -1,0 +1,188 @@
+% Customizable fields and text areas start with % >> below.
+% Lines starting with the comment character (%) are normally removed before release outside the collaboration, but not those comments ending lines
+
+% svn info. These are modified by svn at checkout time.
+% The last version of these macros found before the maketitle will be the one on the front page,
+% so only the main file is tracked.
+% Do not edit by hand!
+\RCS$Revision: 438487 $
+\RCS$HeadURL: svn+ssh://svn.cern.ch/reps/tdr2/notes/AN-16-366/trunk/AN-16-366.tex $
+\RCS$Id: AN-16-366.tex 438487 2017-12-11 18:47:50Z mkrohn $
+%%%%%%%%%%%%% local definitions %%%%%%%%%%%%%%%%%%%%%
+% This allows for switching between one column and two column (cms@external) layouts
+% The widths should  be modified for your particular figures. You'll need additional copies if you have more than one standard figure size.
+\newlength\cmsFigWidth
+\ifthenelse{\boolean{cms@external}}{\setlength\cmsFigWidth{0.85\columnwidth}}{\setlength\cmsFigWidth{0.4\textwidth}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsLeft}{top\xspace}}{\providecommand{\cmsLeft}{left\xspace}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsRight}{bottom\xspace}}{\providecommand{\cmsRight}{right\xspace}}
+\newcommand{\mH}{\ensuremath{m_{\PH}}\xspace}
+\newcommand{\mSD}{\ensuremath{m_{\mathrm{SD}}}\xspace}
+\newcommand{\nsub}{\ensuremath{\tau_{21}}\xspace}
+\newcommand{\nsubddt}{\ensuremath{\tau_{21}^{\mathrm{DDT}}}\xspace}
+\newcommand{\CLs}{\ensuremath{\mathrm{CL}_{\textit{s}}}\xspace}
+\newcommand{\nddt}{\ensuremath{N_{\mathrm{2}}^{\mathrm{1,DDT}}}\xspace}
+\newcommand{\muVal}{\ensuremath{2.32}\xspace}
+\newcommand{\muErrLo}{\ensuremath{1.57}\xspace}
+\newcommand{\muErrHi}{\ensuremath{1.80}\xspace}
+\newcommand{\muNoVal}{\ensuremath{3.16}\xspace}
+\newcommand{\muNoErrLo}{\ensuremath{1.97}\xspace}
+\newcommand{\muNoErrHi}{\ensuremath{2.24}\xspace}
+\newcommand{\muNoObsSig}{\ensuremath{1.6}\xspace}
+\newcommand{\muNoExpSig}{\ensuremath{0.5}\xspace}
+\newcommand{\xsecVal}{\ensuremath{74}\xspace}
+\newcommand{\xsecErrLo}{\ensuremath{49}\xspace}
+\newcommand{\xsecErrHi}{\ensuremath{51}\xspace}
+\newcommand{\xsecZVal}{\ensuremath{849}\xspace}
+\newcommand{\xsecZErrLo}{\ensuremath{209}\xspace}
+\newcommand{\xsecZErrHi}{\ensuremath{257}\xspace}
+\newcommand{\muObsSig}{\ensuremath{1.5}\xspace}
+\newcommand{\muExpSig}{\ensuremath{0.7}\xspace}
+\newcommand{\muZVal}{\ensuremath{0.78}\xspace}
+\newcommand{\muZErrLo}{\ensuremath{0.19}\xspace}
+\newcommand{\muZErrHi}{\ensuremath{0.23}\xspace}
+\newcommand{\muZObsSig}{\ensuremath{5.1}\xspace}
+\newcommand{\muZExpSig}{\ensuremath{5.8}\xspace}
+%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%
+\cmsNoteHeader{AN-VH} % This is over-written in the CMS environment: useful as preprint no. for export versions
+% >> Title: please make sure that the non-TeX equivalent is in PDFTitle below
+\title{Search for the Standard Model Higgs boson produced in association with boosted W and Z bosons and decaying to a bottom quark-antiquark pair}
+
+% >> Authors
+%Author is always "The CMS Collaboration" for PAS and papers, so author, etc, below will be ignored in those cases
+%For multiple affiliations, create an address entry for the combination
+%To mark authors as primary, use the \author* form
+\address[mit]{Massachusetts Institute of Technology}
+
+\author[mit]{Dylan George Hsu}
+\author[mit]{Benedikt Maier}
+\author[mit]{Siddharth Narayanan}
+\author[mit]{Philip Harris}
+\author[mit]{Christoph Paus}
+
+\input{Hbb-definitions}
+% >> Date
+% The date is in yyyy/mm/dd format. Today has beenx
+% redefined to match, but if the date needs to be fixed, please write it in this fashion.
+% For papers and PAS, \today is taken as the date the head file (this one) was last modified according to svn: see the RCS Id string above.
+% For the final version it is best to "touch" the head file to make sure it has the latest date.
+\date{\today}
+
+% >> Abstract
+% Abstract processing:
+% 1. **DO NOT use \include or \input** to include the abstract: our abstract extractor will not search through other files than this one.
+% 2. **DO NOT use %**                  to comment out sections of the abstract: the extractor will still grab those lines (and they won't be comments any longer!).
+% 3. For PASs: **DO NOT use tex macros**         in the abstract: CDS MathJax processor used on the abstract doesn't understand them _and_ will only look within $$. The abstracts for papers are hand formatted so macros are okay.
+\abstract{
+A search for the standard model Higgs boson decaying to a bottom quark-antiquark pair in the associated production mode is presented.
+A data sample comprising up to 35.9/fb %2.32/fb 
+from the full 2016 data taking with $\sqrt{s}=13~\mathrm{TeV}$ has been analyzed in two channels
+%Z($\mu\mu$)H, Z(ee)H, Z($\nu\nu$)H, W($\mu\nu$)H, W(e$\nu$)H, and 95\% C.L. upper limits derived,
+W($\mu\nu$)H, W(e$\nu$)H, and 95\% C.L. upper limits derived,
+for a Higgs boson mass of 125 GeV, yielding an expected upper limit of 1.30 times the SM prediction.
+}
+
+% >> PDF Metadata
+% Do not comment out the following hypersetup lines (metadata). They will disappear in NODRAFT mode and are needed by CDS.
+% Also: make sure that the values of the metadata items are sensible and are in plain text:
+% (1) no TeX! -- for \sqrt{s} use sqrt(s) -- this will show with extra quote marks in the draft version but is okay).
+% (2) no %.
+% (3) No curly braces {}.
+\hypersetup{%
+pdfauthor={Dylan George Hsu},%
+pdftitle{Search for the Standard Model Higgs boson produced in association with boosted W and Z bosons and decaying to a bottom quark-antiquark pair}
+pdfsubject={CMS},%
+pdfkeywords={CMS, physics, software, computing}}
+
+\maketitle %maketitle comes after all the front information has been supplied
+% >> Text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Begin text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% **DO NOT REMOVE THE BIBLIOGRAPHY** which is located before the appendix.
+%% You can take the text between here and the bibiliography as an example which you should replace with the actual text of your document.
+%% If you include other TeX files, be sure to use "\input{filename}" rather than "\input filename".
+%% The latter works for you, but our parser looks for the braces and will break when uploading the document.
+%%%%%%%%%%%%%%%
+
+
+\newcommand{\PV}{\ensuremath{\mathrm{V}}}
+\tableofcontents
+\clearpage
+
+
+
+
+%\section*{Change-log}
+%
+%\subsection*{Version changes (v8)}
+%\begin{itemize}
+%	\item Added appendix for differential cross section measurement
+%\end{itemize}
+%
+%\subsection*{Version changes (v7)}
+%\begin{itemize}
+%	\item Moved to ReMiniAOD for JetHT 
+% 	\begin{itemize}
+%	\item Moved to PFMET collection and adjusted the cut to match signal efficiency of ANv6
+%	\end{itemize}
+%	\item Updated Muon trigger/ID/Isolation efficiency
+%	\item Updated treatment of W/Z EWK uncertainties (following ARC discussion)
+%	\item Z,H simultaneous signal extraction
+%  	\item Channel compatibility
+%\end{itemize}
+
+
+\clearpage
+
+%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+\input{Introduction.tex}
+
+%\clearpage not a pas
+%\section{CMS detector}
+%\label{sec:det}
+%\input{Detector.tex}
+
+\clearpage
+\section{Data and simulated samples}
+\label{sec:samples}
+\input{Samples.tex}
+\input{HiggsPt.tex}
+
+\clearpage
+\section{Object reconstruction}
+\label{sec:physobj}
+\input{PhyObj.tex}
+\clearpage
+\section{Event selection}
+\label{sec:selection}
+\input{Selection.tex}
+
+\clearpage
+\section{Background estimation}
+\label{sec:bkgest}
+\input{BkgEstimation.tex}
+
+%\clearpage
+%\section{Systematic uncertainties}
+%\label{sec:systematics}
+%\input{Systematics.tex}
+%
+%\clearpage
+%\section{Results}
+%\label{sec:results}
+%\input{Results.tex}
+%
+%\section{Summary}
+%\label{sec:summary}
+%\input{Summary.tex}
+
+\clearpage
+
+%% **DO NOT REMOVE BIBLIOGRAPHY**
+\bibliography{auto_generated}   % will be created by the tdr script.
+
+%% examples of appendices. **DO NOT PUT \end{document} at the end
+\clearpage
+
+%\appendix 
+

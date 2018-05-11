@@ -1,0 +1,398 @@
+void deltaLL_data_r1.000000()
+{
+//=========Macro generated from canvas: d/d
+//=========  (Sun Mar 26 14:53:50 2017) by ROOT version6.02/05
+   TCanvas *d = new TCanvas("d", "d",0,0,500,400);
+   gStyle->SetOptStat(0);
+   gStyle->SetOptTitle(0);
+   d->SetHighLightColor(2);
+   d->Range(-0.4324324,-2.701299,2.27027,18.07792);
+   d->SetFillColor(0);
+   d->SetBorderMode(0);
+   d->SetBorderSize(2);
+   d->SetTickx(1);
+   d->SetTicky(1);
+   d->SetLeftMargin(0.16);
+   d->SetBottomMargin(0.13);
+   d->SetFrameFillStyle(0);
+   d->SetFrameBorderMode(0);
+   d->SetFrameFillStyle(0);
+   d->SetFrameBorderMode(0);
+   
+   TH1D *frame_64ec1901 = new TH1D("frame_64ec1901","r frame (data)",50,0,2);
+   frame_64ec1901->SetMinimum(0);
+   frame_64ec1901->SetMaximum(16);
+   frame_64ec1901->SetDirectory(0);
+   frame_64ec1901->SetStats(0);
+   frame_64ec1901->SetLineStyle(0);
+   frame_64ec1901->SetMarkerStyle(20);
+   frame_64ec1901->GetXaxis()->SetTitle("#mu (signal strength)");
+   frame_64ec1901->GetXaxis()->SetNdivisions(505);
+   frame_64ec1901->GetXaxis()->SetLabelFont(42);
+   frame_64ec1901->GetXaxis()->SetLabelOffset(0.007);
+   frame_64ec1901->GetXaxis()->SetTitleOffset(0.85);
+   frame_64ec1901->GetXaxis()->SetTitleFont(42);
+   frame_64ec1901->GetYaxis()->SetTitle("-2 #Delta log L(data)");
+   frame_64ec1901->GetYaxis()->SetLabelFont(42);
+   frame_64ec1901->GetYaxis()->SetLabelOffset(0.007);
+   frame_64ec1901->GetYaxis()->SetTitleOffset(0.8);
+   frame_64ec1901->GetYaxis()->SetTitleFont(42);
+   frame_64ec1901->GetZaxis()->SetLabelFont(42);
+   frame_64ec1901->GetZaxis()->SetLabelOffset(0.007);
+   frame_64ec1901->GetZaxis()->SetLabelSize(0.05);
+   frame_64ec1901->GetZaxis()->SetTitleSize(0.06);
+   frame_64ec1901->GetZaxis()->SetTitleFont(42);
+   frame_64ec1901->Draw("FUNC");
+   
+   Double_t n2ll_data_fx1[47] = {
+   0.02,
+   0.06,
+   0.1,
+   0.14,
+   0.18,
+   0.22,
+   0.26,
+   0.3,
+   0.34,
+   0.38,
+   0.42,
+   0.46,
+   0.5,
+   0.54,
+   0.58,
+   0.62,
+   0.66,
+   0.7,
+   0.74,
+   0.78,
+   0.7812913,
+   0.82,
+   0.86,
+   0.9,
+   0.94,
+   0.98,
+   1.02,
+   1.06,
+   1.1,
+   1.14,
+   1.18,
+   1.22,
+   1.26,
+   1.3,
+   1.34,
+   1.38,
+   1.42,
+   1.46,
+   1.5,
+   1.54,
+   1.58,
+   1.62,
+   1.66,
+   1.7,
+   1.74,
+   1.78,
+   1.82};
+   Double_t n2ll_data_fy1[47] = {
+   24.91373,
+   22.3768,
+   19.97469,
+   17.70764,
+   15.57591,
+   13.57976,
+   11.71943,
+   9.995164,
+   8.407203,
+   6.955781,
+   5.641129,
+   4.463474,
+   3.423038,
+   2.520043,
+   1.754701,
+   1.127226,
+   0.6378235,
+   0.2866983,
+   0.07465976,
+   7.407789e-05,
+   0,
+   0.06496274,
+   0.2689062,
+   0.6120834,
+   1.094679,
+   1.716871,
+   2.47883,
+   3.380728,
+   4.422727,
+   5.604993,
+   6.927681,
+   8.390948,
+   9.994945,
+   11.73982,
+   13.62571,
+   15.65277,
+   17.82112,
+   20.13091,
+   22.58226,
+   25.1753,
+   27.91014,
+   30.78693,
+   33.80576,
+   36.96674,
+   40.27,
+   43.71564,
+   47.30376};
+   TGraph *graph = new TGraph(47,n2ll_data_fx1,n2ll_data_fy1);
+   graph->SetName("n2ll_data");
+   graph->SetTitle("Graph");
+   graph->SetFillColor(1);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#0000ff");
+   graph->SetLineColor(ci);
+   graph->SetLineStyle(2);
+   graph->SetLineWidth(3);
+   graph->SetMarkerStyle(20);
+   
+   TH1F *Graph_n2ll_data1 = new TH1F("Graph_n2ll_data1","Graph",100,0,2);
+   Graph_n2ll_data1->SetMinimum(0);
+   Graph_n2ll_data1->SetMaximum(52.03414);
+   Graph_n2ll_data1->SetDirectory(0);
+   Graph_n2ll_data1->SetStats(0);
+   Graph_n2ll_data1->SetLineStyle(0);
+   Graph_n2ll_data1->SetMarkerStyle(20);
+   Graph_n2ll_data1->GetXaxis()->SetLabelFont(42);
+   Graph_n2ll_data1->GetXaxis()->SetLabelOffset(0.007);
+   Graph_n2ll_data1->GetXaxis()->SetLabelSize(0.05);
+   Graph_n2ll_data1->GetXaxis()->SetTitleSize(0.06);
+   Graph_n2ll_data1->GetXaxis()->SetTitleOffset(0.9);
+   Graph_n2ll_data1->GetXaxis()->SetTitleFont(42);
+   Graph_n2ll_data1->GetYaxis()->SetLabelFont(42);
+   Graph_n2ll_data1->GetYaxis()->SetLabelOffset(0.007);
+   Graph_n2ll_data1->GetYaxis()->SetLabelSize(0.05);
+   Graph_n2ll_data1->GetYaxis()->SetTitleSize(0.06);
+   Graph_n2ll_data1->GetYaxis()->SetTitleOffset(1.25);
+   Graph_n2ll_data1->GetYaxis()->SetTitleFont(42);
+   Graph_n2ll_data1->GetZaxis()->SetLabelFont(42);
+   Graph_n2ll_data1->GetZaxis()->SetLabelOffset(0.007);
+   Graph_n2ll_data1->GetZaxis()->SetLabelSize(0.05);
+   Graph_n2ll_data1->GetZaxis()->SetTitleSize(0.06);
+   Graph_n2ll_data1->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_n2ll_data1);
+   
+   graph->Draw("l");
+   
+   Double_t p2ll_data_fx2[46] = {
+   0.1,
+   0.14,
+   0.18,
+   0.22,
+   0.34,
+   0.38,
+   0.42,
+   0.46,
+   0.5,
+   0.54,
+   0.58,
+   0.66,
+   0.7,
+   0.74,
+   0.78,
+   0.7812738,
+   0.82,
+   0.86,
+   0.9,
+   0.94,
+   0.98,
+   1.02,
+   1.06,
+   1.1,
+   1.14,
+   1.18,
+   1.22,
+   1.26,
+   1.3,
+   1.34,
+   1.38,
+   1.42,
+   1.46,
+   1.5,
+   1.54,
+   1.58,
+   1.62,
+   1.66,
+   1.7,
+   1.74,
+   1.78,
+   1.82,
+   1.86,
+   1.9,
+   1.94,
+   1.98};
+   Double_t p2ll_data_fy2[46] = {
+   16.90252,
+   15.12966,
+   13.35668,
+   11.59951,
+   6.752857,
+   5.398643,
+   4.21577,
+   3.205867,
+   2.402762,
+   1.7025,
+   1.118004,
+   0.3755746,
+   0.1624645,
+   0.04040212,
+   4.085212e-05,
+   0,
+   0.03298914,
+   0.04136246,
+   0.2522846,
+   0.4228868,
+   0.6349027,
+   0.7307817,
+   1.170835,
+   1.48871,
+   1.836158,
+   1.977847,
+   2.357049,
+   2.758512,
+   3.180981,
+   3.622547,
+   4.081085,
+   4.555753,
+   5.044827,
+   5.547202,
+   6.061731,
+   6.587389,
+   7.577521,
+   7.668087,
+   8.221454,
+   8.782268,
+   9.349468,
+   9.922918,
+   10.50136,
+   11.08512,
+   11.67317,
+   12.26509};
+   graph = new TGraph(46,p2ll_data_fx2,p2ll_data_fy2);
+   graph->SetName("p2ll_data");
+   graph->SetTitle("Graph");
+   graph->SetFillColor(1);
+   graph->SetLineWidth(3);
+   graph->SetMarkerStyle(20);
+   
+   TH1F *Graph_p2ll_data2 = new TH1F("Graph_p2ll_data2","Graph",100,0,2.168);
+   Graph_p2ll_data2->SetMinimum(0);
+   Graph_p2ll_data2->SetMaximum(18.59277);
+   Graph_p2ll_data2->SetDirectory(0);
+   Graph_p2ll_data2->SetStats(0);
+   Graph_p2ll_data2->SetLineStyle(0);
+   Graph_p2ll_data2->SetMarkerStyle(20);
+   Graph_p2ll_data2->GetXaxis()->SetLabelFont(42);
+   Graph_p2ll_data2->GetXaxis()->SetLabelOffset(0.007);
+   Graph_p2ll_data2->GetXaxis()->SetLabelSize(0.05);
+   Graph_p2ll_data2->GetXaxis()->SetTitleSize(0.06);
+   Graph_p2ll_data2->GetXaxis()->SetTitleOffset(0.9);
+   Graph_p2ll_data2->GetXaxis()->SetTitleFont(42);
+   Graph_p2ll_data2->GetYaxis()->SetLabelFont(42);
+   Graph_p2ll_data2->GetYaxis()->SetLabelOffset(0.007);
+   Graph_p2ll_data2->GetYaxis()->SetLabelSize(0.05);
+   Graph_p2ll_data2->GetYaxis()->SetTitleSize(0.06);
+   Graph_p2ll_data2->GetYaxis()->SetTitleOffset(1.25);
+   Graph_p2ll_data2->GetYaxis()->SetTitleFont(42);
+   Graph_p2ll_data2->GetZaxis()->SetLabelFont(42);
+   Graph_p2ll_data2->GetZaxis()->SetLabelOffset(0.007);
+   Graph_p2ll_data2->GetZaxis()->SetLabelSize(0.05);
+   Graph_p2ll_data2->GetZaxis()->SetTitleSize(0.06);
+   Graph_p2ll_data2->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_p2ll_data2);
+   
+   graph->Draw("l");
+   TLine *line = new TLine(0,3.841459,2,3.841459);
+
+   ci = TColor::GetColor("#ff0000");
+   line->SetLineColor(ci);
+   line->SetLineWidth(2);
+   line->Draw();
+   line = new TLine(0,0,0,3.841459);
+   line->SetLineWidth(2);
+   line->Draw();
+   line = new TLine(0,0,0,3.841459);
+
+   ci = TColor::GetColor("#0000ff");
+   line->SetLineColor(ci);
+   line->SetLineStyle(2);
+   line->SetLineWidth(2);
+   line->Draw();
+   
+   TH1D *frame_64ec1902 = new TH1D("frame_64ec1902","r frame (data)",50,0,2);
+   frame_64ec1902->SetMinimum(0);
+   frame_64ec1902->SetMaximum(16);
+   frame_64ec1902->SetDirectory(0);
+   frame_64ec1902->SetStats(0);
+   frame_64ec1902->SetLineStyle(0);
+   frame_64ec1902->SetMarkerStyle(20);
+   frame_64ec1902->GetXaxis()->SetTitle("#mu (signal strength)");
+   frame_64ec1902->GetXaxis()->SetNdivisions(505);
+   frame_64ec1902->GetXaxis()->SetLabelFont(42);
+   frame_64ec1902->GetXaxis()->SetLabelOffset(0.007);
+   frame_64ec1902->GetXaxis()->SetTitleOffset(0.85);
+   frame_64ec1902->GetXaxis()->SetTitleFont(42);
+   frame_64ec1902->GetYaxis()->SetTitle("-2 #Delta log L(data)");
+   frame_64ec1902->GetYaxis()->SetLabelFont(42);
+   frame_64ec1902->GetYaxis()->SetLabelOffset(0.007);
+   frame_64ec1902->GetYaxis()->SetTitleOffset(0.8);
+   frame_64ec1902->GetYaxis()->SetTitleFont(42);
+   frame_64ec1902->GetZaxis()->SetLabelFont(42);
+   frame_64ec1902->GetZaxis()->SetLabelOffset(0.007);
+   frame_64ec1902->GetZaxis()->SetLabelSize(0.05);
+   frame_64ec1902->GetZaxis()->SetTitleSize(0.06);
+   frame_64ec1902->GetZaxis()->SetTitleFont(42);
+   frame_64ec1902->Draw("AXISSAME");
+   
+   TLegend *leg = new TLegend(0.7,0.15,0.89,0.3,NULL,"brNDC");
+   leg->SetLineColor(0);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("p2ll_data","stat + syst","l");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(3);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("n2ll_data","stat only","l");
+
+   ci = TColor::GetColor("#0000ff");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(2);
+   entry->SetLineWidth(3);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   TLatex *   tex = new TLatex(0.67,0.92,"35.9 fb^{-1} (13 TeV)");
+tex->SetNDC();
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.04);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.17,0.92,"CMS");
+tex->SetNDC();
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.27,0.92,"Simulation Preliminary");
+tex->SetNDC();
+   tex->SetTextFont(52);
+   tex->SetTextSize(0.04);
+   tex->SetLineWidth(2);
+   tex->Draw();
+   d->Modified();
+   d->cd();
+   d->SetSelected(d);
+}
